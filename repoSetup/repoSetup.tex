@@ -24,6 +24,8 @@ they should be presented. In the example below
 there is one activity file \verb!example.tex!
 written without the extension \verb!.tex!
 contained in a directory \verb!example!.
+For more information about the structure of \verb!course.xim!
+see the following activity.
 \begin{verbatim}
 ---
 name: Getting Started with Ximera
@@ -52,16 +54,15 @@ touch example.tex
 \item The activity contained in \verb!example.tex!
 should be in the document class \verb!ximera!
 and should contain the title of the activity
-and an abstract.
-For example,
+and an abstract. For example,
 \begin{verbatim}
+\documentclass{ximera}
 \title{The First Activity}
+\begin{document}
 \begin{abstract}
 This activity deals with \verb!Ximera! activities
 \end{abstract}
-\documentclass{ximera}
 \maketitle
-\begin{document}
 \end{document}
 \end{verbatim}
 The activity at this stage contains no content.
@@ -69,11 +70,9 @@ The activity at this stage contains no content.
 \item On \href{http://github.org}{\tt github.org}
 create a repository as shown
 in the image below.
-\begin{center}
-\begin{image}
+\begin{thumbnail}
 \includegraphics[scale=.3]{RepoInit.png}
-\end{image}
-\end{center}
+\end{thumbnail}
 
 \item Follow the instructions in \href{http://github.org}{\tt github.org} to set up
 the repository, accepting all default settings.
@@ -117,10 +116,10 @@ you could edit the file as shown below.
 \begin{verbatim}
 \documentclass{ximera}
 \title{The First Activity}
+\begin{document}
 \begin{abstract}
 This activity deals with \verb!Ximeara! activities.
 \end{abstract}
-\begin{document}
 \maketitle
 This activity is about creative work.
 \begin{exercise}
