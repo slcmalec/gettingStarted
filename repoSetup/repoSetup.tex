@@ -29,8 +29,23 @@ example/example
 In general, it is a sensible policy to have each
 activity in its own directory, of the same name.
 
-\end{enumerate}
-
 \item As mentioned above, we need to add a directory
-called \verb!example!
+called \verb!example! containing a file called \verb!example.tex!.
+\begin{verbatim}
+mkdir example
+cd example
+touch example.tex
+\end{verbatim}
+
+\item The activity in \verb!example.tex!
+should be in the documentclass \verb!ximera!
+and should contain the title of the activity.
+For example,
+\begin{verbatim}
+\documentclass{ximera}
+\begin{document}
+\title{Our first activity}
+\end{document}
+\end{verbatim.
+\end{enumerate}
 \end{document}
