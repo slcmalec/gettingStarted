@@ -53,14 +53,6 @@ For example,
 \end{verbatim}
 The activity at this stage contains no content.
 
-\item Now we initilize the git repository. In the
-top level \verb!sampleCourse! directory, we run the following commands.
-\begin{verbatim}
-git init
-git add .
-git commit -am "Initializing our new course"
-\end{verbatim}
-
 \item On \verb!github.org! create a repository as shown
 in the image below.
 \begin{center}
@@ -68,5 +60,24 @@ in the image below.
 \includegraphics[scale=.3]{RepoInit.png}
 \end{image}
 \end{center}
+
+\item Follow the instructions in \verb!github! to set up
+the repository, accepting all default settings.
+This should include some further git commands that
+will push your work above to \verb!github!:
+\begin{verbatim}
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/marcusjbishop/example.git
+git push -u origin master
+\end{verbatim}
+These commands also appear on \verb!github!.
+
+\item Write something in \verb!README.md!
+
+
+
 \end{enumerate}
 \end{document}
