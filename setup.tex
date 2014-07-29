@@ -1,8 +1,25 @@
 \documentclass{ximera}
 \begin{document}
+\title{Setting up the repository}
 \begin{enumerate}
 \item Create a directory and change to that directory.
 In this example, we will create a director called gettingStarted.
-\begin{center}\tt mkdir gettingStarted && cd gettingStarted\end{center}
+\begin{center}
+\begin{verbatim}
+mkdir gettingStarted && cd gettingStarted
+\end{verbatim}
+\end{center}
+\item A Ximera directory should contain
+a file called \verb!course.xim! containing
+at least the following.
+\begin{verbatim}
+---
+name: Getting Started with Ximera
+description: This is a Ximera activity explaining how to get started with Ximera for instructors.
+---
+
+setup
+\end{verbatim}
+
 \end{enumerate}
 \end{document}
