@@ -1,7 +1,8 @@
 \documentclass{ximera}
 \usepackage[colorlinks=true,urlcolor=blue]{hyperref}
-\begin{document}
 \title{Setting up the repository}
+\begin{document}
+\maketitle
 \begin{enumerate}
 \item Create a directory and change to that directory.
 In this example, we will create a director called sampleCourse.
@@ -28,11 +29,13 @@ with Ximera for instructors.
 
 example/example
 \end{verbatim}
-In general, it is a sensible policy to have each
-activity in its own directory, of the same name. This facilitates the
+In general, we recommend having each
+activity in its own directory, which hasthe same name.
+This facilitates the
 sharing of activities between collaborators and makes reusing existing
 activities much easier. Later in this course, we will see examples of
-how to use existing activities and courses rather than starting from scratch.
+how to borrow existing activities from other courses
+rather than starting from scratch.
 
 \item As mentioned above, we need to add a directory
 called \verb!example! containing a file called \verb!example.tex!.
@@ -42,15 +45,16 @@ cd example
 touch example.tex
 \end{verbatim}
 
-\item The activity in \verb!example.tex!
+\item The activity contained in \verb!example.tex!
 should be in the document class \verb!ximera!
 and should contain the title of the activity
 and an abstract.
 For example,
 \begin{verbatim}
-\documentclass{ximera}
 \title{The First Activity}
 \abstract{This activity deals with \verb!Ximera! activities}
+\documentclass{ximera}
+\maketitle
 \begin{document}
 \end{document}
 \end{verbatim}
@@ -67,8 +71,9 @@ in the image below.
 
 \item Follow the instructions in \href{http://github.org}{\tt github.org} to set up
 the repository, accepting all default settings.
-This should include some further git commands that
-will push your work above to \href{http://github.org}{\tt github.org}:
+This should involve executing some further \verb{git} commands that
+connect and push your repository to
+\href{http://github.org}{\tt github.org}:
 \begin{verbatim}
 touch README.md
 git init
@@ -83,8 +88,8 @@ These commands also appear on \href{http://github.org}{\tt github.org}.
 
 \item Click on \verb!settings! on the
 \href{http://github.org}{\tt github.org} page
-for this repository created above,
-and then \verb!Webhooks & Services!
+for the repository created above,
+and then on \verb!Webhooks & Services!
 \begin{center}
 \begin{image}
 \includegraphics[scale=.3]{Webhook.png}
@@ -108,6 +113,7 @@ you could edit the file as shown below.
 \title{The First Activity}
 \abstract{This activity deals with \verb!Ximeara! activities}
 \begin{document}
+\maketitle
 This activity is about creative work.
 \begin{exercise}
   Choose the best place to work on mathematics.
@@ -119,6 +125,8 @@ This activity is about creative work.
 \end{exercise}
 \end{document}
 \end{verbatim}
+See the following activity for more information on creating
+exercises.
 
 \item Change to the root directory of your repository
 and execute the following commands.
@@ -126,5 +134,7 @@ and execute the following commands.
 git commit -am "Added an exercise"
 git push
 \end{verbatim}
+
+\item If everything went well, you should find your course listed at 
 \end{enumerate}
 \end{document}
