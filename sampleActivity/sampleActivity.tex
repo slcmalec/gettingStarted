@@ -75,9 +75,41 @@ Produces:
 
 Currently, multiple choice questions are automatically shuffled.
 
+\section{Matrix Answer Type}
 
+We also support matrices of expressions.
 
+\begin{verbatim}
+\begin{question}
+Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
+\begin{solution}
+    \begin{matrix-answer}
+	    correctMatrix = [['x','y'],['xy','z+1']]
+    \end{matrix-answer}
+\end{solution}
+\end{question}
+\end{verbatim}
 
+\begin{question}
+Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
+\begin{solution}
+    \begin{matrix-answer}
+	    correctMatrix = [['x','y'],['xy','z+1']]
+    \end{matrix-answer}
+\end{solution}
+\end{question}
+
+The plus and minus muttons add and subtract columns or rows.  
+
+\section{free-response}
+
+The free response environment gives students access to a latex editor. 
+
+\begin{free-response}
+	This is the model solution.
+\end{free-response}
+
+Clicking on ''view model solution" lets the students see whatever you typed in the ''free-response" environment.
 
 
 
