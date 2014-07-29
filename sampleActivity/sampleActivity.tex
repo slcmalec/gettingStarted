@@ -5,8 +5,10 @@
 		This section teaches how to use some of the features of Ximera
 	\end{abstract}
 	
-	Ximera supports several exercise types.  For example the code
+	Ximera supports several exercise types.
 	
+	
+\section{Basic Function Answer Type}	
 \begin{verbatim}
     \begin{question}
         \begin{solution}
@@ -44,6 +46,39 @@ Produces:
 Under the hood, Ximera is parsing the user input, producing a function, and checking the user input function against "answer" at 
 $100$ different complex numbers, and seeing if the results are "reasonably" close to each other.  
 We compare the complex extensions of these functions to circumvent domain issues.
+
+\section{Multiple Choice Answer Type}
+
+\begin{verbatim}
+
+\begin{question}
+	Which of the following functions has a graph which is a parabola?
+	\begin{multiple-choice}
+		\choice[correct]{$y=x^2+3x-3$}
+		\choice{$y = \frac{1}{x+2}$}
+		\choice{$y=3x+1$}
+	\end{multiple-choice}
+\end{question}
+\end{verbatim}
+
+Produces:
+
+\begin{question}
+	Which of the following functions has a graph which is a parabola?
+	\begin{multiple-choice}
+		\choice[correct]{$y=x^2+3x-3$}
+		\choice{$y = \frac{1}{x+2}$}
+		\choice{$y=3x+1$}
+	\end{multiple-choice}
+\end{question}
+
+Currently, multiple choice questions are automatically shuffled.
+
+
+
+
+
+
 
 
 
