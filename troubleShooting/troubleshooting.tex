@@ -4,10 +4,11 @@
 \begin{document}
 \begin{abstract}
 This activity contains some possible solutions
-to issues that may arise
+to issues that might arise
 \end{abstract}
+\maketitle
 \begin{enumerate}
- \item Be careful when pasting the key into
+\item Be careful when pasting the key into
 the webhook secret field. Be sure that no extra
 spaces were copied. Push the \verb!Update webhook! button on
 \href{http://github.org}{\tt github.org}
@@ -27,21 +28,27 @@ may not work.
 include a \verb!\title! command. 
 
 \item The abstract of every activity file
-needs to occur after \verb!\begin{document}!.
+and the \verb!\maketitle! command
+need to occur after \verb!\begin{document}!.
 
 \item A good way to check for \TeX\ typing mistakes
-is to run \LaTeX\ on the \TeX\ files. Indeed, this
-is good practice and additionally produces handouts for students.
+is to run \LaTeX\ on all the \TeX\ files. Indeed, this
+is good practice irrespective of mistakes
+and additionally produces handouts that
+can be given to students.
 
 \item If your \TeX\ files compile correctly,
-you can confirm that they have been successfully uploaded to
+you should confirm that they have been successfully uploaded to
 \href{http://github.org}{\tt github.org} and that 
 \href{http://github.org}{\tt github.org} has successfully
 pushed those files in turn to
-\href{http://ximera.osu.edu}{\tt ximera.osu.edu},
-you can click on the webhook on
+\href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
+To do this you can click on the most recent delivery
+on the \verb!Webhooks & Services! page in your repository on
 \href{http://github.org}{\tt github.org}.
-In case of any errors of this kind, they will be reported here.
+In case of any delivery errors, they will be reported here.
+You can also push the \verb!Redeliver! button
+in case of any errors.
 
 \end{enumerate}
 \end{document}
