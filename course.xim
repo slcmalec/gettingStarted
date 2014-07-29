@@ -3,5 +3,5 @@ name: Getting Started with Ximera
 description: This is a Ximera activity explaining how to get started with Ximera for instructors.
 ---
 
-setup
+repoSetup/repoSetup
 

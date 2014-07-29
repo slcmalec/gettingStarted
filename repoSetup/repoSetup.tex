@@ -14,9 +14,9 @@ a text file called \verb!course.xim! containing
 at least the name of the course, a description of the course,
 and the names of all the activity \LaTeX\ files in the order
 they should be presented. In the example below
-there is one activity file \verb!setup.tex!,
-written without the extension
-\verb!.tex!
+there is one activity file \verb!repoSetup.tex!
+written without the extension \verb!.tex!,
+which lives in a directory \verb!repoSetup!.
 \begin{verbatim}
 ---
 name: Getting Started with Ximera
@@ -24,8 +24,10 @@ description: This is a Ximera activity explaining how to get started
 with Ximera for instructors.
 ---
 
-setup
+repoSetup/repoSetup
 \end{verbatim}
+In general, it is a sensible policy to have each
+activity in its own directory, of the same name.
 
 \end{enumerate}
 \end{document}
