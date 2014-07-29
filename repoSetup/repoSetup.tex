@@ -17,7 +17,7 @@ cd sampleCourse
 \end{verbatim}
 \end{center}
 \item A Ximera course consists of a directory containing
-a text file called \verb!course.xim!. This file should contain
+minimally a text file called \verb!course.xim!. This file should contain
 the name of the course, a description of the course,
 and the names of all the activity \LaTeX\ files in the order
 they should be presented. In the example below
@@ -35,13 +35,16 @@ with Ximera for instructors.
 
 example/example
 \end{verbatim}
+{\bf Note the three dashes encapsulating the name and description! These
+are required.}
+
 In general, we recommend having each
-activity in its own directory, which hasthe same name.
+activity in its own directory of the same name.
 This facilitates the
 sharing of activities between collaborators and makes reusing existing
 activities much easier. Later in this course, we will see examples of
 how to borrow existing activities from other courses
-rather than starting from scratch.
+rather than starting from scratch. 
 
 \item As mentioned above, we need to add a directory
 called \verb!example! containing a file called \verb!example.tex!.
@@ -52,8 +55,8 @@ touch example.tex
 \end{verbatim}
 
 \item The activity contained in \verb!example.tex!
-should be in the document class \verb!ximera!
-and should contain the title of the activity
+should use the document class \verb!ximera!
+and contain the title of the activity
 and an abstract. For example,
 \begin{verbatim}
 \documentclass{ximera}
@@ -65,20 +68,18 @@ This activity deals with \verb!Ximera! activities
 \maketitle
 \end{document}
 \end{verbatim}
-The activity at this stage contains no content.
+The activity at this stage contains no actual content.
 
-\item On \href{http://github.org}{\tt github.org}
-create a repository as shown
-in the image below.
+\item On \href{http://github.org}{\tt github.org},
+create a repository. See the image below.
 \begin{image}
 \includegraphics[scale=.3]{RepoInit.png}
 \end{image}
 
 \item Follow the instructions in \href{http://github.org}{\tt github.org} to set up
 the repository, accepting all default settings.
-This should involve executing some further \verb!git! commands that
-connect and push your repository to
-\href{http://github.org}{\tt github.org}:
+Upon accepting the default settings, \href{http://github.org}{\tt github.org}
+will respond with additional directions:
 \begin{verbatim}
 touch README.md
 git init
@@ -87,11 +88,12 @@ git commit -m "first commit"
 git remote add origin https://github.com/marcusjbishop/example.git
 git push -u origin master
 \end{verbatim}
-These commands also appear on \href{http://github.org}{\tt github.org}.
+Run these commands as directed. This initializes the repository on 
+\href{http://github.org}{\\tt github.org}.
 
 \item Write something in \verb!README.md!
 
-\item Click on \verb!settings! on the
+\item Click on \verb!settings! button on the
 \href{http://github.org}{\tt github.org} page
 for the repository created above,
 and then on \verb!Webhooks & Services!
@@ -106,13 +108,13 @@ into the \verb!Payload URL! field and
 \verb!8mi0tsrje9n3asPu86XC198G1XSdZj!
 into the \verb!Secret! field.
 
-\item In order to cause your course to appear on
+\item In order to have our course listed on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
-you need to \verb!push! the repository.
-However, since \verb!git! will not allow you to \verb!push!
-until you make a change, this is a good point
-to add an exercise to \verb!exercise.tex!. For example,
-you could edit the file as shown below.
+we need to \verb!push! the repository.
+However, since \verb!git! will not allow a \verb!push!
+without any changes to the repository, this is a good point
+to add content in the form of a simple exercise within the 
+\verb!example.tex! file.
 \begin{verbatim}
 \documentclass{ximera}
 \title{The First Activity}
