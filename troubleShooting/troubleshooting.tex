@@ -1,0 +1,37 @@
+\documentclass{ximera}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\title{Troubleshooting}
+\begin{document}
+\begin{abstract}
+This activity contains some possible solutions
+to issues that may arise
+\end{abstract}
+\begin{enumerate}
+ \item Be careful when pasting the key into
+the webhook secret field. Be sure that no extra
+spaces were copied. Push the \verb!Update webhook! button on
+\href{http://github.org}{\tt github.org}
+after correcting the secret.
+
+\item To see updates on the course webpage
+after pushing changes through \verb!git!,
+push the browser's refresh button
+and then click the \verb!Update activity! button 
+on the course page. Deleting your browser's cache
+may also resolve certain issues.
+
+\item The optional scaling argument of \verb!\includegraphics!
+may not work.
+
+\item The preamble of every activity file needs to 
+include a \verb!\title! command. 
+
+\item The abstract of every activity file
+needs to occur after \verb!\begin{document}!.
+
+\item A good way to check for \TeX\ typing mistakes
+is to run \LaTeX\ on the \TeX\ files. Indeed, this
+is good practice and additionally can be used
+to create handouts for students.
+\end{enumerate}
+\end{document}
