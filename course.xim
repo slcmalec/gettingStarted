@@ -4,6 +4,6 @@ description: This is a Ximera activity explaining how to get started with Ximera
 ---
 
 repoSetup/repoSetup
-troubleshooting/troubleshooting
+troubleShooting/troubleshooting
 sampleActivity/sampleActivity
 sampleActivity/hints
