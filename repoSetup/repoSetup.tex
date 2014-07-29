@@ -19,8 +19,9 @@ cd sampleCourse
 \item A Ximera course consists of a directory containing
 minimally a text file called \verb!course.xim!. This file should contain
 the name of the course, a description of the course,
-and the names of all the activity \LaTeX\ files in the order
-they should be presented. In the example below
+and the names of all the \LaTeX\ activity files 
+comprising the course, in the order
+that they should be presented to students. In the example below
 there is one activity file \verb!example.tex!
 written without the extension \verb!.tex!
 contained in a directory \verb!example!.
@@ -30,15 +31,16 @@ see the following activity.
 ---
 name: Getting Started with Ximera
 description: This is a Ximera activity explaining how to get started
-with Ximera for instructors.
+with Ximera for course instructors.
 ---
 
 example/example
 \end{verbatim}
+
 {\bf Note the three dashes encapsulating the name and description! These
 are required.}
 
-In general, we recommend having each
+In general, we recommend placing each
 activity in its own directory of the same name.
 This facilitates the
 sharing of activities between collaborators and makes reusing existing
