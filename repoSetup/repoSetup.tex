@@ -1,5 +1,5 @@
 \documentclass{ximera}
-\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \begin{document}
 \title{Setting up the repository}
 \begin{enumerate}
@@ -56,7 +56,8 @@ For example,
 \end{verbatim}
 The activity at this stage contains no content.
 
-\item On \href{github.org} create a repository as shown
+\item On \href{http://github.org}{\tt github.org}
+create a repository as shown
 in the image below.
 \begin{center}
 \begin{image}
@@ -64,10 +65,10 @@ in the image below.
 \end{image}
 \end{center}
 
-\item Follow the instructions in \href{github.org} to set up
+\item Follow the instructions in \href{http://github.org}{\tt github.org} to set up
 the repository, accepting all default settings.
 This should include some further git commands that
-will push your work above to \href{github.org}:
+will push your work above to \href{http://github.org}{\tt github.org}:
 \begin{verbatim}
 touch README.md
 git init
@@ -76,11 +77,12 @@ git commit -m "first commit"
 git remote add origin https://github.com/marcusjbishop/example.git
 git push -u origin master
 \end{verbatim}
-These commands also appear on \href{github.org}.
+These commands also appear on \href{http://github.org}{\tt github.org}.
 
 \item Write something in \verb!README.md!
 
-\item Click on \verb!settings! on the \href{github.org} page
+\item Click on \verb!settings! on the
+\href{http://github.org}{\tt github.org} page
 for this repository created above,
 and then \verb!Webhooks & Services!
 \begin{center}
@@ -95,7 +97,8 @@ into the \verb!Payload URL! field and
 into the \verb!Secret! field.
 
 \item In order to cause your course to appear on
-\href{ximera.osu.edu/course} you need to \verb!push! the repository.
+\href{http://ximera.osu.edu/course}{ximera.osu.edu/course}
+you need to \verb!push! the repository.
 However, since \verb!git! will not allow you to \verb!push!
 until you make a change, this is a good point
 to add an exercise to \verb!exercise.tex!. For example,
