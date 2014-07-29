@@ -95,9 +95,32 @@ into the \verb!Secret! field.
 
 \item In order to cause the course to appear on
 \verb!ximera.osu.edu/course! you need to \verb!push! the repository.
-However, \verb!git! will not allow you to \verb!push!
-unless you make a change. This is therefore a good time
-to add an exercise to \verb!exercise.tex!. For example
+However, since \verb!git! will not allow you to \verb!push!
+until you make a change, this is a good point
+to add an exercise to \verb!exercise.tex!. For example,
+you could edit the file as shown below.
+\begin{verbatim}
+\documentclass{ximera}
+\title{The First Activity}
+\abstract{This activity deals with \verb!Ximeara! activities}
+\begin{document}
+This activity is about creative work.
+\begin{exercise}
+  Choose the best place to work on mathematics.
+  \begin{multiple-choice}
+    \choice{At the library}
+    \choice[correct]{At the caf\'e}
+    \choice{In your office}
+  \end{multiple-choice}
+\end{exercise}
+\end{document}
+\end{verbatim}
 
+\item Change to the root directory of your repository
+and execute the following commands.
+\begin{verb}
+git commit -am "Added an exercise"
+git push
+\end{verb}
 \end{enumerate}
 \end{document}
