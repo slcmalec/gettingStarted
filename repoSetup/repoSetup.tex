@@ -3,10 +3,10 @@
 \title{Setting up the repository}
 \begin{enumerate}
 \item Create a directory and change to that directory.
-In this example, we will create a director called gettingStarted.
+In this example, we will create a director called sampleCourse.
 \begin{center}
 \begin{verbatim}
-mkdir gettingStarted && cd gettingStarted
+mkdir sampleCourse&& cd sampleCourse 
 \end{verbatim}
 \end{center}
 \item A Ximera course consists of a directory containing
@@ -50,6 +50,15 @@ For example,
 \begin{document}
 \title{Our first activity}
 \end{document}
+\end{verbatim}
+The activity at this stage contains no content.
+
+\item Now we initilize the git repository. In the
+top level \verb!sampleCourse! directory, we run the following commands.
+\begin{verbatim}
+git init
+git add .
+git commit -am "Initializing our new course"
 \end{verbatim}
 \end{enumerate}
 \end{document}
