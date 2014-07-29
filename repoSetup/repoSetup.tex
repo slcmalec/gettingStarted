@@ -42,13 +42,15 @@ touch example.tex
 \end{verbatim}
 
 \item The activity in \verb!example.tex!
-should be in the documentclass \verb!ximera!
-and should contain the title of the activity.
+should be in the document class \verb!ximera!
+and should contain the title of the activity
+and an abstract.
 For example,
 \begin{verbatim}
 \documentclass{ximera}
+\title{The First Activity}
+\abstract{This activity deals with \verb!Ximeara! activities}
 \begin{document}
-\title{Our first activity}
 \end{document}
 \end{verbatim}
 The activity at this stage contains no content.
@@ -90,6 +92,12 @@ Put \verb!http://ximera.osu.edu/github!
 into the \verb!Payload URL! field and
 \verb!8mi0tsrje9n3asPu86XC198G1XSdZj!
 into the \verb!Secret! field.
+
+\item In order to cause the course to appear on
+\verb!ximera.osu.edu/course! you need to \verb!push! the repository.
+However, \verb!git! will not allow you to \verb!push!
+unless you make a change. This is therefore a good time
+to add an exercise to \verb!exercise.tex!. For example
 
 \end{enumerate}
 \end{document}
