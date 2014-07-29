@@ -21,13 +21,9 @@ minimally a text file called \verb!course.xim!. This file should contain
 the name of the course, a description of the course,
 and the names of all the \LaTeX\ activity files 
 comprising the course, in the order
-that they should be presented to students. In the example below
-there is one activity file \verb!example.tex!
-written without the extension \verb!.tex!
-contained in a directory \verb!example!.
-Generally courses should have more activities than the
-example above. In this case each activity should be listed
-in \verb!course.xim! with indent
+that they should be presented to students.
+
+
 \begin{verbatim}
 ---
 name: Getting Started with Ximera
@@ -43,15 +39,23 @@ Note that the three dashes encapsulating the name and description
 are required, as is the blank line following the second set of dashes!
 \end{warning}
 
-In general, we recommend placing each
+We recommend placing each
 activity in its own directory, which should have the same name.
 This facilitates the
 sharing of activities between collaborators and makes reusing existing
-activities much easier. Later in this course, we will see examples of
-how to borrow existing activities from other courses
-rather than starting from scratch. 
+activities much easier.
+%Later in this course, we will see examples of
+%how to borrow existing activities from other courses
+%rather than starting from scratch. 
+In the example above
+there is one activity file \verb!example.tex!
+written without the extension \verb!.tex! We will
+create this file in the next step.
+Generally courses should have more activities than this
+one, with each activity name in \verb!course.xim!
+indented to reflect its position in the course hierarchy.
 
-\item As mentioned above, we need to add a directory
+\item Next we create a directory
 called \verb!example! containing a file called \verb!example.tex!.
 \begin{verbatim}
 mkdir example
@@ -60,7 +64,7 @@ touch example.tex
 \end{verbatim}
 
 \item The activity contained in \verb!example.tex!
-should use the document class \verb!ximera!
+should be in the document class \verb!ximera!
 and contain the title of the activity
 and an abstract. For example,
 \begin{verbatim}
@@ -73,18 +77,21 @@ This activity deals with \verb!Ximera! activities
 \maketitle
 \end{document}
 \end{verbatim}
-The activity at this stage contains no actual content.
+The activity at this stage contains no content.
 
 \item On \href{http://github.org}{\tt github.org},
-create a repository. See the image below.
+create a repository with the same name as your directory
+by clicking the \verb!+! by your account name, as shown
+below.
+
 \begin{image}
 \includegraphics[scale=.3]{RepoInit.png}
 \end{image}
 
 \item Follow the instructions in \href{http://github.org}{\tt github.org} to set up
 the repository, accepting all default settings.
-Upon accepting the default settings, \href{http://github.org}{\tt github.org}
-will respond with additional directions:
+\href{http://github.org}{\tt github.org}
+will respond with additional directions, which you should execute.
 \begin{verbatim}
 touch README.md
 git init
@@ -96,11 +103,11 @@ git push -u origin master
 Run these commands as directed. This initializes the repository on 
 \href{http://github.org}{\\tt github.org}.
 
-\item Write something in \verb!README.md!
+\item Optionally write a description
+of the course in \verb!README.md!
 
-\item Click on \verb!settings! button on the
-\href{http://github.org}{\tt github.org} page
-for the repository created above,
+\item Click on the \verb!settings! button on the
+\href{http://github.org}{\tt github.org} repository page
 and then on \verb!Webhooks & Services!
 \begin{center}
 \begin{image}
