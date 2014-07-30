@@ -70,10 +70,12 @@ the three dashes encapsulating the name and description
 are required, as is the blank line following the second set of dashes!
 \end{warning}
 
-\item Create a new directory
+\item In your terminal create a new directory
 in the \verb!sampleCourse! directory
-called \verb!example! and
-containing a file called \verb!example.tex!. 
+called \verb!example!. The \verb!example! directory should
+contain a file called \verb!example.tex!.
+This can be accomplished by
+executing the commands below.
 \begin{verbatim}
 mkdir example
 cd example
@@ -111,7 +113,7 @@ below.
 \includegraphics[scale=.3]{RepoInit.png}
 \end{image}
 
-After selecting \verb!New Repository!, a new
+After selecting \verb!New repository!, a new
 page appears with a field named \verb!Repository name!. Enter
 \verb!sampleCourse! into this field and
 accept all default settings by pressing the
@@ -130,7 +132,16 @@ git commit -m "first commit"
 git remote add origin https://github.com/marcusjbishop/sampleCourse.git
 git push -u origin master
 \end{verbatim}
-Execute these commands now.
+Before executing these commands, return
+to your terminal and ensure that your current directory is
+the root directory \verb!sampleCourse! of your repository.
+If your current directory is \verb!example!
+from the previous step you can change to the parent directory by typing
+\begin{verbatim}
+cd ..
+\end{verbatim}
+Now execute the commands returned by
+\href{http://github.org}{\tt github.org}.
 
 \begin{remark}
 Note that your username appears in the fifth line
