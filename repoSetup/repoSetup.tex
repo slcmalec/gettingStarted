@@ -152,6 +152,18 @@ and also create an empty file named \verb!README.md!
 in the \verb!sampleCourse! directory.
 \end{remark}
 
+\item Execute the following command.
+\begin{verbatim}
+git add .
+\end{verbatim}
+\begin{remark}
+This command adds the directory
+\verb!example! and the files \verb!example/example.tex!
+and \verb!course.xim! to the your repository.
+In general the command above must be executed
+every time a new file is created.
+\end{remark}
+
 \item This step is optional. Add a
 description of your course to the file
 \verb!README.md!.
@@ -217,11 +229,14 @@ and execute the following commands.
 git commit -am "Added an exercise"
 git push
 \end{verbatim}
-
-\item If everything went well, you should find your course listed at 
+If everything went well, you should find your course listed at 
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
 If not, see the troubleshooting activity
 or send your questions to
 \href{mailto:ximera@math.osu.edu}{\tt ximera@math.osu.edu}.
+\begin{remark} The commands above inform \verb!git! that
+changes have been made to your repository and 
+in 
+\end{remark}
 \end{enumerate}
 \end{document}
