@@ -7,11 +7,9 @@ Instructions for setting up a repository containing course materials.
 \end{abstract}
 \maketitle
 
-
 \begin{image}
 \includegraphics{XimeraGraphic.png}
 \end{image}
-
 
 \begin{enumerate}
 \item \label{maketopdir}
@@ -27,7 +25,8 @@ cd sampleCourse
 \end{center}
 \item A Ximera course consists of a directory (which we created above)
 containing a text file called \verb!course.xim!. 
-We will create a course that has only one activity. Using any text editor,
+We will create a course that has only one activity.
+Using any text editor,
 create a file named \verb!course.xim! containing the content below:
 
 \begin{verbatim}
@@ -87,11 +86,8 @@ cd example
 touch example.tex
 \end{verbatim}
 
-\item 
-The activity contained in \verb!example.tex!
-should be in the document class \verb!ximera!
-and contain the title of the activity
-and an abstract. For example,
+\item Using your text editor, open \verb!example.tex!
+and add the following content.
 \begin{verbatim}
 \documentclass{ximera}
 \title{The First Activity}
@@ -102,7 +98,14 @@ This activity deals with \verb!Ximera! activities
 \maketitle
 \end{document}
 \end{verbatim}
-The activity at this stage contains no content.
+
+\begin{remark}
+An activity should be in the document class \verb!ximera!
+and should contain the title of the activity
+and an abstract.
+The activity above has at this stage
+a title and abstract, but is otherwise blank.
+\end{remark}
 
 \item On \href{http://github.org}{\tt github.org},
 create a repository with the same name as your directory
