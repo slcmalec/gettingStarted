@@ -27,7 +27,7 @@ create and save a file named
 
 \begin{verbatim}
 ---
-name: Getting Started with Ximera
+name: An example course
 description: This is a Ximera activity explaining how to get started with Ximera for course instructors.
 ---
 
@@ -44,11 +44,18 @@ The \verb!course.xim! file above specifies that
 there is one activity file 
 and that it will be located in \verb!example.tex!
 written without the extension \verb!.tex!. 
-In general, the syntax is \verb!path/to/the/texfile!.
-We will
-create this file in the next step.
+We will create this file in the next step.
 
-Generally courses should have more than one activity,
+The content of the \verb!name:! line
+specifies the title of your course exactly as it will appear on
+\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
+In order to distinguish your course from
+other courses on
+\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
+you should change this title to something unique
+such as \verb!ISU Math 104!.
+
+Generally courses should contain more than one activity,
 with each activity filename appearing in \verb!course.xim!
 without the \verb!.tex! extension and
 indented to reflect its position in the course hierarchy.
@@ -68,8 +75,8 @@ The \verb!course.xim! file has particular formatting requirements.
 \item The name of the file must be exactly \verb!course.xim!
 \item The \verb!---!'s encapsulating the name and description
 on lines 1 and 4
-are required, as is the blank line following the second set of dashes.
-\item Both entries between the \verb!---! must exist as single lines. 
+are required, as is the blank line following the second \verb!---!.
+\item Both entries between the \verb!---!'s must exist as single lines. 
 In other words, the only newlines permitted are the ones
 at the end of lines 2 and 3.
 \end{enumerate}
