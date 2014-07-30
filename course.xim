@@ -4,7 +4,7 @@ description: This is a Ximera activity explaining how to get started with Ximera
 ---
 
 whatIsXimera/whatIsXimera
-repoSetup/repoSetup
-troubleShooting/troubleshooting
-sampleActivity/sampleActivity
-sampleActivity/hints
+settingUpTheRepository/settingUpTheRepository
+troubleshooting/troubleshooting
+questionAndAnswerTypes/questionAndAnswerTypes
+questionAndAnswerTypes/hints
