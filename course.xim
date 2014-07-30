@@ -3,6 +3,7 @@ name: Getting Started with Ximera
 description: This is a Ximera activity explaining how to get started with Ximera for instructors.
 ---
 
+whatIsXimera/whatIsXimera
 repoSetup/repoSetup
 troubleShooting/troubleshooting
 sampleActivity/sampleActivity
