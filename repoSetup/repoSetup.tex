@@ -25,7 +25,7 @@ cd sampleCourse
 \end{center}
 \item A Ximera course consists of a directory (which we created above)
 containing a text file called \verb!course.xim!. Using any text editor,
-create a file named \verb!course.xim! to contain the content below:
+create a file named \verb!course.xim! containing the content below:
 
 \begin{verbatim}
 ---
@@ -43,21 +43,6 @@ and the names of all the \LaTeX\ activity files
 comprising the course, in the order
 that they should be presented to students.
 
-
-\begin{warning}
-Note that the file name must be \verb!course.xim! and 
-the three dashes encapsulating the name and description
-are required, as is the blank line following the second set of dashes!
-\end{warning}
-
-We recommend placing each
-activity in its own directory, which should have the same name.
-This facilitates
-sharing activities between collaborators and makes reusing existing
-activities easier.
-%Later in this course, we will see examples of
-%how to borrow existing activities from other courses
-%rather than starting from scratch. 
 In the example above
 there is one activity file \verb!example.tex!
 written without the extension \verb!.tex!. We will
@@ -66,6 +51,24 @@ Generally courses should have more than one activity,
 with each activity filename appearing in \verb!course.xim!
 without the \verb!.tex! extension and
 indented to reflect its position in the course hierarchy.
+
+
+\begin{warning}
+Note that the file name must be \verb!course.xim! and 
+the three dashes encapsulating the name and description
+are required, as is the blank line following the second set of dashes!
+\end{warning}
+
+\begin{remark}
+We recommend placing each
+activity in its own directory, which should have the same name.
+This facilitates
+sharing activities between collaborators and makes reusing existing
+activities easier.
+%Later in this course, we will see examples of
+%how to borrow existing activities from other courses
+%rather than starting from scratch. 
+\end{remark}
 
 \item Next we create a directory
 called \verb!example! containing a file called \verb!example.tex!.
