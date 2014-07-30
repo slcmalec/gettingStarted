@@ -14,9 +14,7 @@ Ximera supports several exercise types.
 \section{Basic Function Answer Type}	
 \begin{verbatim}
     \begin{question}
-        \begin{solution}
-            $3\times 2 = $ \answer{6}
-        \end{solution}
+         $3\times 2 = $ \answer{6}
     \end{question}
 \end{verbatim}
 
@@ -32,19 +30,15 @@ In addition to numerical answers, we also support elementary functions:
 
 \begin{verbatim}
     \begin{question}
-        \begin{solution}
-            $ \frac{\partial}{\partial x} x^2\sin(y) = $ \answer{2xsin(y)}
-        \end{solution}
+         $ \frac{\partial}{\partial x} x^2\sin(y) = $ \answer{2xsin(y)}
     \end{question}
 \end{verbatim}
 
 Produces:
 
   \begin{question}
-        \begin{solution}
-            $ \frac{\partial}{\partial x} x^2\sin(y) = $ \answer{2xsin(y)}
-        \end{solution}
-    \end{question}
+       $ \frac{\partial}{\partial x} x^2\sin(y) = $ \answer{2xsin(y)}
+  \end{question}
     
 Under the hood, Ximera is parsing the user input, producing a function, and checking the user input function against "answer" at 
 $100$ different complex numbers, and seeing if the results are "reasonably" close to each other.  
@@ -56,11 +50,11 @@ We compare the complex extensions of these functions to circumvent domain issues
 
 \begin{question}
 	Which of the following functions has a graph which is a parabola?
-	\begin{multiple-choice}
+	\begin{multipleChoice}
 		\choice[correct]{$y=x^2+3x-3$}
 		\choice{$y = \frac{1}{x+2}$}
 		\choice{$y=3x+1$}
-	\end{multiple-choice}
+	\end{multipleChoice}
 \end{question}
 \end{verbatim}
 
@@ -68,11 +62,11 @@ Produces:
 
 \begin{question}
 	Which of the following functions has a graph which is a parabola?
-	\begin{multiple-choice}
+	\begin{multipleChoice}
 		\choice[correct]{$y=x^2+3x-3$}
 		\choice{$y = \frac{1}{x+2}$}
 		\choice{$y=3x+1$}
-	\end{multiple-choice}
+	\end{multipleChoice}
 \end{question}
 
 Currently, multiple choice questions are automatically shuffled.
@@ -84,21 +78,17 @@ We also support matrices of expressions.
 \begin{verbatim}
 \begin{question}
 Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
-\begin{solution}
     \begin{matrix-answer}
 	    correctMatrix = [['x','y'],['xy','z+1']]
     \end{matrix-answer}
-\end{solution}
 \end{question}
 \end{verbatim}
 
 \begin{question}
 Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
-\begin{solution}
-    \begin{matrix-answer}
+    \begin{matrixAnswer}
 	    correctMatrix = [['x','y'],['xy','z+1']]
-    \end{matrix-answer}
-\end{solution}
+    \end{matrixAnswer}
 \end{question}
 
 The plus and minus muttons add and subtract columns or rows.  
