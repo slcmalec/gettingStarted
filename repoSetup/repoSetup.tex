@@ -63,12 +63,15 @@ activities easier.
 \end{remark}
 
 \begin{warning}
-The \verb!course.xim! file has very specific formatting requirements:
+The \verb!course.xim! file has particular formatting requirements.
 \begin{enumerate}
-\item The file name must be \verb!course.xim!
-\item The three dashes encapsulating the name and description
+\item The name of the file must be exactly \verb!course.xim!
+\item The \verb!---!'s encapsulating the name and description
+on lines 1 and 4
 are required, as is the blank line following the second set of dashes.
-\item Each entry in between the set of three dashes must exist as a single line. 
+\item Both entries between the \verb!---! must exist as single lines. 
+In other words, the only newlines permitted are the ones
+at the end of lines 2 and 3.
 \end{enumerate}
 \end{warning}
 
