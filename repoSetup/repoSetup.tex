@@ -14,9 +14,11 @@ Instructions for setting up a repository containing course materials.
 
 
 \begin{enumerate}
-\item Create a directory for your course files
+\item \label{maketopdir}
+Create a directory for your course files
 and change to that directory.
 In this example, we will create a directory called \verb!sampleCourse!.
+Open a terminal session and issue the following commands:
 \begin{center}
 \begin{verbatim}
 mkdir sampleCourse
@@ -74,15 +76,19 @@ are required, as is the blank line following the second set of dashes!
 \end{warning}
 
 
-\item Next we create a directory
-called \verb!example! containing a file called \verb!example.tex!.
+\item Next we create a new directory
+called \verb!example! (inside the \verb!sampleCourse! directory)
+containing a file called \verb!example.tex!. 
+In
+the same terminal session from step \ref{maketopdir}
 \begin{verbatim}
 mkdir example
 cd example
 touch example.tex
 \end{verbatim}
 
-\item The activity contained in \verb!example.tex!
+\item 
+The activity contained in \verb!example.tex!
 should be in the document class \verb!ximera!
 and contain the title of the activity
 and an abstract. For example,
