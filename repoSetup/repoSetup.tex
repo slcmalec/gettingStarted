@@ -180,8 +180,10 @@ Finally push the green \verb!Add webhook! button at the bottom.
 you need to \verb!push! the repository.
 However, since \verb!git! will not allow a \verb!push!
 without any changes to the repository, this is a good point
-to add content in the form of a simple exercise within the 
-\verb!example.tex! file.
+to add content in the form of a simple exercise.
+Update the file \verb!example.tex! 
+that you created above so that it looks like the following. 
+
 \begin{verbatim}
 \documentclass{ximera}
 \title{The First Activity}
@@ -201,10 +203,15 @@ This activity is about creative work.
 \end{exercise}
 \end{document}
 \end{verbatim}
-See the following activity for more information on creating
-exercises.
+\begin{remark}
+The edits above insert
+a multiple-choice question into the \verb!example!
+activity. See the Questions and Answers
+activity appearing later in this tutorial
+for more information on creating exercises.
+\end{remark}
 
-\item Change to the root directory of your repository
+\item Change to the top directory \verb!sampleCourse!
 and execute the following commands.
 \begin{verbatim}
 git commit -am "Added an exercise"
