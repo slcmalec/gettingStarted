@@ -1,0 +1,251 @@
+\documentclass{ximera}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\title{Setting up the repository}
+\begin{document}
+\begin{abstract}
+Instructions for setting up a repository containing course materials.
+\end{abstract}
+\maketitle
+
+\begin{enumerate}
+\item Create a directory for your course files
+and change to that directory.
+In this example, we will create a directory called \verb!sampleCourse!.
+Open a terminal session and issue the following commands:
+\begin{center}
+\begin{verbatim}
+mkdir sampleCourse
+cd sampleCourse 
+\end{verbatim}
+\end{center}
+\item A Ximera course consists of a directory (which we created above)
+containing a text file called \verb!course.xim!. 
+We will create a course that has only one activity.
+Using any text editor,
+create and save a file named
+\verb!course.xim! containing the content below.
+
+\begin{verbatim}
+---
+name: Getting Started with Ximera
+description: This is a Ximera activity explaining how to get started with Ximera for course instructors.
+---
+
+example/example
+\end{verbatim}
+
+\begin{remark}
+This file contains information such as
+the name of the course, a description of the course,
+and the names of all the \LaTeX\ activity files 
+comprising the course, in the order
+that they should be presented to students.
+The \verb!course.xim! file above specifies that 
+there is one activity file 
+and that it will be located in \verb!example.tex!
+written without the extension \verb!.tex!. 
+In general, the syntax is \verb!path/to/the/texfile!.
+We will
+create this file in the next step.
+
+Generally courses should have more than one activity,
+with each activity filename appearing in \verb!course.xim!
+without the \verb!.tex! extension and
+indented to reflect its position in the course hierarchy.
+We recommend placing each
+activity in its own directory, which should have the same name.
+This facilitates
+sharing activities between collaborators and makes reusing existing
+activities easier.
+%Later in this course, we will see examples of
+%how to borrow existing activities from other courses
+%rather than starting from scratch. 
+\end{remark}
+
+\begin{warning}
+The \verb!course.xim! file has particular formatting requirements.
+\begin{enumerate}
+\item The name of the file must be exactly \verb!course.xim!
+\item The \verb!---!'s encapsulating the name and description
+on lines 1 and 4
+are required, as is the blank line following the second set of dashes.
+\item Both entries between the \verb!---! must exist as single lines. 
+In other words, the only newlines permitted are the ones
+at the end of lines 2 and 3.
+\end{enumerate}
+\end{warning}
+
+\item In your terminal create a new directory
+in the \verb!sampleCourse! directory
+called \verb!example!. The \verb!example! directory should
+contain a file called \verb!example.tex!.
+This can be accomplished by
+executing the commands below.
+\begin{verbatim}
+mkdir example
+cd example
+touch example.tex
+\end{verbatim}
+
+\item Using your text editor, open \verb!example.tex!
+and paste the following content. Then save the file.
+\begin{verbatim}
+\documentclass{ximera}
+\title{The First Activity}
+\begin{document}
+\begin{abstract}
+This activity deals with \verb!Ximera! activities
+\end{abstract}
+\maketitle
+\end{document}
+\end{verbatim}
+
+\begin{remark}
+An activity should be in the document class \verb!ximera!
+and should contain the title of the activity
+and an abstract. At this stage the activity above has
+a title and abstract, but is otherwise blank.
+\end{remark}
+
+\item Log into your \href{http://github.com}{\tt github.com}
+account and
+create a repository with the same name as your top directory
+\verb!sampleCourse!
+by clicking the \verb!+! by your account name, as shown
+below.
+
+\begin{image}
+\includegraphics[scale=.3]{RepoInit.png}
+\end{image}
+
+After selecting \verb!New repository!, a new
+page appears with a field named \verb!Repository name!. Enter
+\verb!sampleCourse! into this field and
+accept all default settings by pressing the
+\verb!Create Repository! button.
+\begin{image}
+\includegraphics[scale=.3]{CreateRepo.png}
+\end{image}
+\href{http://github.com}{\tt github.com}
+will respond with additional commands similar to
+those shown below.
+\begin{verbatim}
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/marcusjbishop/sampleCourse.git
+git push -u origin master
+\end{verbatim}
+Before executing these commands, return
+to your terminal and ensure that your current directory is
+the root directory \verb!sampleCourse! of your repository.
+If your current directory is \verb!example!
+from the previous step you can change to the parent directory by typing
+\begin{verbatim}
+cd ..
+\end{verbatim}
+Now execute the commands returned by
+\href{http://github.com}{\tt github.com}.
+
+\begin{remark}
+Note that your username appears in the fifth line
+of these commands in place of \verb!marcusjbishop!.
+Note also the \verb!s! in \verb!https!.
+These commands initialize the repository on \href{http://github.com}{\tt github.com}
+and create an empty file named \verb!README.md!
+in the \verb!sampleCourse! directory.
+\end{remark}
+
+\item Execute the following command.
+\begin{verbatim}
+git add .
+\end{verbatim}
+\begin{remark}
+Note that the command contains a dot.
+The command adds the newly created directory
+\verb!example! and the files \verb!example/example.tex!
+and \verb!course.xim! to the your repository.
+In general the command above must be executed
+every time a new file or directory is created.
+\end{remark}
+
+\item This step is optional. Add a
+description of your course to the file
+\verb!README.md!.
+
+\begin{remark}
+In general the content of \verb!README.md! should
+provide a description of your project that will appear only on
+\href{http://github.com}{\tt github.com}.
+\end{remark}
+
+\item Click on the \verb!Settings! button on the
+\href{http://github.com}{\tt github.com} repository page
+and then on \verb!Webhooks & Services!.
+Now click the \verb!Add webhook! button.
+Type \verb!http://ximera.osu.edu/github!
+into the \verb!Payload URL! field and
+\verb!8mi0tsrje9n3asPu86XC198G1XSdZj!
+into the \verb!Secret! field.
+\begin{image}
+\includegraphics[scale=.3]{Webhook.png}
+\end{image}
+Finally push the green \verb!Add webhook! button at the bottom.
+
+\item In order to have your course listed on
+\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
+you need to \verb!push! the repository.
+However, since \verb!git! will not allow a \verb!push!
+without any changes to the repository, this is a good point
+to add content in the form of a simple exercise.
+Update the file \verb!example.tex! 
+that you created above so that it looks like the following. 
+
+\begin{verbatim}
+\documentclass{ximera}
+\title{The First Activity}
+\begin{document}
+\begin{abstract}
+This activity deals with \verb!Ximera! activities.
+\end{abstract}
+\maketitle
+This activity is about creative work.
+\begin{exercise}
+  Choose the best place to work on mathematics.
+  \begin{multipleChoice}
+    \choice{At the library}
+    \choice[correct]{At the caf\'e}
+    \choice{In your office}
+  \end{multipleChoice}
+\end{exercise}
+\end{document}
+\end{verbatim}
+\begin{remark}
+The edits above insert
+a multiple-choice question into the \verb!example!
+activity. See the Questions and Answers
+activity appearing later in this tutorial
+for more information on creating exercises.
+\end{remark}
+
+\item Change to the top directory \verb!sampleCourse!
+and execute the following commands.
+\begin{verbatim}
+git commit -am "Added an exercise"
+git push
+\end{verbatim}
+If everything went well, you should find your course listed at 
+\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
+If not, see the troubleshooting activity
+or send your questions to
+\href{mailto:ximera@math.osu.edu}{\tt ximera@math.osu.edu}.
+\begin{remark} The commands above inform \verb!git! that
+changes have been made to your repository and 
+communicates them to
+\href{http://github.com}{\tt github.com}
+which in turn communicates them to
+\href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
+\end{remark}
+\end{enumerate}
+\end{document}
