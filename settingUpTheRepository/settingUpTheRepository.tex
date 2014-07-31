@@ -9,11 +9,12 @@ Instructions for setting up a repository containing course materials.
 
 This tutorial is intended to help course instructors get a
 \href{http://ximera.osu.edu}{\sf Ximera} 
-course up and running. It guides the reader through the creation of 
-a git repository, the connection of the repository to
+course up and running. It guides the reader through the creation of a
+\href{http://git-scm.com}{\sf git}
+repository, the connection of the repository to
 \href{http://github.com}{\tt github.com}
-through a webhook, and the creation of an activity containing some 
-simple exercises.
+through a webhook, and the creation of an activity containing a 
+simple exercise.
 
 The instructions below assume that the reader will be
 working on a computer running either Linux or OS X.
@@ -31,8 +32,8 @@ create a course on the webserver
 \href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
 This is to say that if you follow the instructions below,
 a new course that {\em you} control will appear on the web,
-viable to all the world. Therefore,
-your course should naturally not contain offensive or copyrighted
+visable to all the world. Therefore,
+your course should not contain offensive or copyrighted
 materials. However, in the future, it is quite likely that a
 more robust course validation mechanism will be implemented.
 \end{warning}
@@ -71,8 +72,8 @@ theFirstActivity/theFirstActivity
 The content of the line beginning with \verb!name:!
 specifies the title of your course exactly as it will appear on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
-So without any further changes to \verb!course.xim!
-your course will appear as \verb!An example course!.
+Without any further changes to \verb!course.xim!
+your course will be listed as \verb!An example course!.
 However, in order to distinguish your course from
 other courses on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
@@ -178,7 +179,7 @@ in the image below.
 After selecting \verb!New repository! from the dropdown menu, a new
 page appears with a field named \verb!Repository name!. Enter
 \verb!anExampleCourse! into this field and
-accept all default the settings by pressing the green
+accept all the default settings by pressing the green
 \verb!Create Repository! button.
 \begin{image}
 \includegraphics[scale=.3]{CreateRepo.png}
@@ -230,7 +231,7 @@ every time a new file or directory is created.
 \end{remark}
 
 \item This step is optional. Type a
-description of your course to the file
+description of your course in the file
 \verb!README.md!.
 
 \begin{remark}
@@ -240,7 +241,7 @@ This file is meant to provide a description of your project
 to other developers.
 \end{remark}
 
-\item Click the \verb!Settings! button on the
+\item Click the \verb!Settings! button on your
 \href{http://github.com}{\tt github.com} repository page
 and then on \verb!Webhooks & Services!.
 Now click the \verb!Add webhook! button.
@@ -254,7 +255,7 @@ into the \verb!Secret! field.
 Finally push the green \verb!Add webhook! button at the bottom
 of the window.
 
-\item In order to have your course listed on
+\item In order to have your course served by
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
 you need to \verb!push! your repository.
 However, since \textsf{git} will not allow a \verb!push!
@@ -286,7 +287,7 @@ This activity is about creative work.
 \begin{remark}
 The edits above insert
 a multiple-choice question into the \verb!theFirstActivity!
-activity. See the \verb!Question and answer types!
+activity. See the {\em Question and answer types}
 activity later in this tutorial
 for more information on creating exercises.
 \end{remark}
@@ -299,17 +300,18 @@ git push
 \end{verbatim}
 If everything went well, you should find your course listed at 
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
-If not, see the \verb!troubleshooting! activity in this tutorial
+If not, see the {\em Troubleshooting} activity in this tutorial
 or send your questions to
 \href{mailto:ximera@math.osu.edu}{\tt ximera@math.osu.edu}.
-\begin{remark} The commands above inform \verb!git! that
+\begin{remark} The commands above inform 
+\href{http://git-scm.com}{\sf git} that
 changes have been made to your repository and 
 communicates them to
 \href{http://github.com}{\tt github.com}
 which in turn communicates them to
 \href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
 You should execute similar commands whenever you
-change files in your course.
+change files in your repository.
 \end{remark}
 \end{enumerate}
 \end{document}
