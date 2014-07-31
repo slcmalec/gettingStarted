@@ -7,23 +7,57 @@ Instructions for setting up a repository containing course materials.
 \end{abstract}
 \maketitle
 
+This tutorial is intended to help course instructors get a
+\href{http://ximera.osu.edu}{\sf Ximera} 
+course up and running. It guides the reader through the creation of 
+a git repository, the connection of the repository to
+\href{http://github.com}{\tt github.com}
+through a webhook, and the creation of an activity containing some 
+simple exercises.
+
+The instructions below assume that the reader will be
+working on a computer running either Linux or OS X.
+Similar instructions for Windows users will be composed
+at a later stage, but the Linux instructions below will probably
+be sufficient for Windows users with some familiarity with Unix commands.
+While the reader could in principle avoid installing 
+\href{http://texlive.org}{\LaTeX}\ and
+\href{http://git-scm.com}{\sf git} these programs are necessary
+to take full advantage of the features of the 
+\href{http://ximera.osu.edu}{\sf Ximera} system.
+
+\begin{warning} Currently {\em anyone} can follow
+the instructions below to create a course on the webserver
+\href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
+This is to say that if you follow the instructions below,
+a new course that {\em you} control will appear on the web,
+visable to all the world. Therefore,
+your course should naturally not contain offensive or copyrighted
+materials. However, in the future, it is quite likely that a
+more robust course validation mechanism will be implemented.
+\end{warning}
+
 \begin{enumerate}
 \item Create a directory for your course files
 and change to that directory.
-In this example, we will create a directory called \verb!sampleCourse!.
-Open a terminal session and issue the following commands:
+In this example, we will create a directory called
+\verb!anExampleCourse!.
+Open a terminal session and type the following commands.
 \begin{center}
 \begin{verbatim}
-mkdir sampleCourse
-cd sampleCourse 
+mkdir anExampleCourse
+cd anExampleCourse 
 \end{verbatim}
 \end{center}
-\item A Ximera course consists of a directory (which we created above)
+
+\item A Ximera course consists of a directory (the one
+created above in this example)
 containing a text file called \verb!course.xim!. 
-We will create a course that has only one activity.
+In this tutorial we will create a simple
+course that has only one activity.
 Using any text editor,
 create and save a file named
-\verb!course.xim! containing the content below.
+\verb!course.xim! containing the text below.
 
 \begin{verbatim}
 ---
@@ -31,76 +65,89 @@ name: An example course
 description: This is a Ximera activity explaining how to get started with Ximera for course instructors.
 ---
 
-example/example
+theFirstActivity/theFirstActivity
 \end{verbatim}
-However, the content of the \verb!name:! line
+\begin{warning}
+The content of the line beginning with \verb!name:!
 specifies the title of your course exactly as it will appear on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
+So in this example, the course will appear
+as \verb!An example course!.
 In order to distinguish your course from
 other courses on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
 you should change the title to something unique
 such as \verb!ISU Math 104!.
+\end{warning}
 
 \begin{remark}
-This file contains information such as
-the name of the course, a description of the course,
-and the names of all the \LaTeX\ activity files 
+In general the file \verb!course.xim! specifies course information
+such as the name of the course, a description of the course,
+and the names of all \LaTeX\ activity files 
 comprising the course, in the order
-that they should be presented to students.
-The \verb!course.xim! file above specifies that 
-there is one activity file 
-and that it will be located in \verb!example.tex!
-written without the extension \verb!.tex!. 
-We will create this file in the next step.
+they should be presented to students.
+In addition to a name and a description,
+the \verb!course.xim! file above specifies that 
+there is one activity file \verb!theFirstActivity.tex!,
+written without the extension \verb!.tex!,  
+located in a directory called \verb!theFirstActivity!.
+We will create this file and directory in the following step.
 
 Generally courses should contain more than one activity,
 with each activity filename appearing in \verb!course.xim!
 without the \verb!.tex! extension and
 indented to reflect its position in the course hierarchy.
 We recommend placing each
-activity in its own directory, which should have the same name.
+activity in its own directory of the same name.
 This facilitates
-sharing activities between collaborators and makes reusing existing
+sharing activities among collaborators and makes reusing existing
 activities easier.
 %Later in this course, we will see examples of
 %how to borrow existing activities from other courses
 %rather than starting from scratch. 
+We also recommend that the directory and the \LaTeX\ file have exactly
+the same name as the title of the activity,
+with all spaces removed and all words other than the first
+capitalized. So for example, if the title of the
+activity were \verb!Plants native to Ohio!
+the \LaTeX\ file \verb!plantsNativeToOhio.tex!
+would be located in a directory called
+\verb!plantsNativeToOhio!.
 \end{remark}
 
 \begin{warning}
 The \verb!course.xim! file has particular formatting requirements.
 \begin{enumerate}
 \item The name of the file must be exactly \verb!course.xim!
-\item The \verb!---!'s encapsulating the name on line 2
-and the description on line 3
+\item The \verb!---!'s encapsulating the name on line~2
+and the description on line~3
 are required, as is the blank line following the second \verb!---!.
 \item Both entries between the \verb!---!'s must exist as single lines. 
 In other words, the only newlines permitted are those
-at the ends of lines 2 and 3.
+at the end of lines~2 and 3.
 \end{enumerate}
 \end{warning}
 
 \item In your terminal create a new directory
-in the \verb!sampleCourse! directory
-called \verb!example!. The \verb!example! directory should
-contain a file called \verb!example.tex!.
+in the \verb!anExampleCourse! directory
+called \verb!theFirstActivity!. The \verb!theFirstActivity!
+directory should contain a file called \verb!theFirstActivity.tex!.
 This can be accomplished by
 executing the commands below.
 \begin{verbatim}
-mkdir example
-cd example
-touch example.tex
+mkdir theFirstActivity 
+cd theFirstActivity 
+touch theFirstActivity.tex
 \end{verbatim}
 
-\item Using your text editor, open \verb!example.tex!
-and paste the following content. Then save the file.
+\item Using your text editor, open \verb!theFirstActivity.tex!
+and paste in the following text. Then save the file.
 \begin{verbatim}
 \documentclass{ximera}
 \title{The First Activity}
 \begin{document}
 \begin{abstract}
-This activity deals with \verb!Ximera! activities
+This activity deals with \verb!Ximera! activities.
 \end{abstract}
 \maketitle
 \end{document}
@@ -109,14 +156,16 @@ This activity deals with \verb!Ximera! activities
 \begin{remark}
 An activity should be in the document class \verb!ximera!
 and should contain the title of the activity
-and an abstract. At this stage the activity above has
-a title and abstract, but is otherwise blank.
+and an abstract.
+These will both appear on the course website in the navigation area.
+At this stage your activity contains
+a title and an abstract, but is otherwise blank.
 \end{remark}
 
 \item Log into your \href{http://github.com}{\tt github.com}
 account and
-create a repository with the same name as your top directory
-\verb!sampleCourse!
+create a repository with the name
+\verb!anExampleCourse!
 by clicking the \verb!+! by your account name, as shown
 below.
 
@@ -124,30 +173,30 @@ below.
 \includegraphics[scale=.3]{RepoInit.png}
 \end{image}
 
-After selecting \verb!New repository!, a new
+After selecting \verb!New repository! from the dropdown menu, a new
 page appears with a field named \verb!Repository name!. Enter
-\verb!sampleCourse! into this field and
-accept all default settings by pressing the
+\verb!anExampleCourse! into this field and
+accept all default settings by pressing the green
 \verb!Create Repository! button.
 \begin{image}
 \includegraphics[scale=.3]{CreateRepo.png}
 \end{image}
 \href{http://github.com}{\tt github.com}
-will respond with additional commands similar to
+will respond by printing additional commands similar to
 those shown below.
 \begin{verbatim}
 touch README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/marcusjbishop/sampleCourse.git
+git remote add origin https://github.com/marcusjbishop/anExampleCourse.git
 git push -u origin master
 \end{verbatim}
 Before executing these commands, return
 to your terminal and ensure that your current directory is
-the root directory \verb!sampleCourse! of your repository.
-If your current directory is \verb!example!
-from the previous step you can change to the parent directory by typing
+\verb!anExampleCourse!. 
+If your current directory is \verb!theFirstActivity!
+from the previous step you can change to its parent directory by typing
 \begin{verbatim}
 cd ..
 \end{verbatim}
@@ -160,19 +209,21 @@ of these commands in place of \verb!marcusjbishop!.
 Note also the \verb!s! in \verb!https!.
 These commands initialize the repository on \href{http://github.com}{\tt github.com}
 and create an empty file named \verb!README.md!
-in the \verb!sampleCourse! directory.
+in the \verb!anExampleCourse! directory.
 \end{remark}
 
-\item Execute the following command.
+\item Execute the following command, still in the
+\verb!anExampleCourse! directory.
 \begin{verbatim}
 git add .
 \end{verbatim}
 \begin{remark}
-Note that the command contains a dot.
-The command adds the newly created directory
-\verb!example! and the files \verb!example/example.tex!
-and \verb!course.xim! to the your repository.
-In general the command above must be executed
+Note that the command above contains a dot at the end.
+This command adds the newly created directory
+\verb!theFirstActivity! and the files
+\verb!theFirstActivity/theFirstActivity.tex!
+and \verb!course.xim! to your repository.
+In general a \verb!git add! command must be executed
 every time a new file or directory is created.
 \end{remark}
 
@@ -181,9 +232,9 @@ description of your course to the file
 \verb!README.md!.
 
 \begin{remark}
-In general the content of \verb!README.md! should
-provide a description of your project that will appear only on
+The content of \verb!README.md! will appear only on
 \href{http://github.com}{\tt github.com}.
+This file is meant to provide a description of your project.
 \end{remark}
 
 \item Click on the \verb!Settings! button on the
@@ -197,16 +248,18 @@ into the \verb!Secret! field.
 \begin{image}
 \includegraphics[scale=.3]{Webhook.png}
 \end{image}
-Finally push the green \verb!Add webhook! button at the bottom.
+Finally push the green \verb!Add webhook! button at the bottom
+of the window.
 
 \item In order to have your course listed on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
-you need to \verb!push! the repository.
-However, since \verb!git! will not allow a \verb!push!
-without any changes to the repository, this is a good point
-to add content in the form of a simple exercise.
-Update the file \verb!example.tex! 
-that you created above so that it looks like the following. 
+you need to \verb!push! your repository.
+However, since \textsf{git} will not allow a \verb!push!
+if you haven't made any changes to the repository,
+this is a good point to add some further content
+in the form of a simple exercise.
+Update the file \verb!theFirstActivity.tex! 
+you created above so that it looks like the following. 
 
 \begin{verbatim}
 \documentclass{ximera}
@@ -229,13 +282,13 @@ This activity is about creative work.
 \end{verbatim}
 \begin{remark}
 The edits above insert
-a multiple-choice question into the \verb!example!
-activity. See the Questions and Answers
+a multiple-choice question into the \verb!theFirstActivity!
+activity. See the \verb!Question and answer types!
 activity appearing later in this tutorial
 for more information on creating exercises.
 \end{remark}
 
-\item Change to the top directory \verb!sampleCourse!
+\item Change to the top directory \verb!anExampleCourse!
 and execute the following commands.
 \begin{verbatim}
 git commit -am "Added an exercise"
@@ -243,7 +296,7 @@ git push
 \end{verbatim}
 If everything went well, you should find your course listed at 
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
-If not, see the troubleshooting activity
+If not, see the \verb!troubleshooting! activity
 or send your questions to
 \href{mailto:ximera@math.osu.edu}{\tt ximera@math.osu.edu}.
 \begin{remark} The commands above inform \verb!git! that
@@ -252,6 +305,8 @@ communicates them to
 \href{http://github.com}{\tt github.com}
 which in turn communicates them to
 \href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
+You should execute similar commands whenever you
+change files in your course.
 \end{remark}
 \end{enumerate}
 \end{document}
