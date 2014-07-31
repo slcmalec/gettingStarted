@@ -7,15 +7,31 @@ Instructions for setting up a repository containing course materials.
 \end{abstract}
 \maketitle
 
+This tutorial is intended to help course instructors to get a Ximera 
+course up and running. It guides the reader through the creation of 
+a git repository, the connection of the repository to
+\href{http://github.com}{\tt github.com}
+through a webhook, and the creation of a activity containing some 
+simple exercises.
+
+The instructions below assume that the reader will be
+working on a computer running either Linux or OSX.
+Similar instructions for Windows users will be composed
+at a later stage, but the Linux instructions below will probably
+be sufficient for Windows users familiar with Unix commands.
+While the reader could in principle avoid installing \LaTeX
+and \href{git}{http://git-scm.com} these programs are necessary
+in order to take full advantage of the features of the Ximera system.
+
 \begin{enumerate}
 \item Create a directory for your course files
 and change to that directory.
-In this example, we will create a directory called \verb!sampleCourse!.
+In this example, we will create a directory called \verb!anExampleCourse!.
 Open a terminal session and issue the following commands:
 \begin{center}
 \begin{verbatim}
-mkdir sampleCourse
-cd sampleCourse 
+mkdir anExampleCourse
+cd anExampleCourse 
 \end{verbatim}
 \end{center}
 \item A Ximera course consists of a directory (which we created above)
@@ -82,7 +98,7 @@ at the ends of lines 2 and 3.
 \end{warning}
 
 \item In your terminal create a new directory
-in the \verb!sampleCourse! directory
+in the \verb!anExampleCourse! directory
 called \verb!example!. The \verb!example! directory should
 contain a file called \verb!example.tex!.
 This can be accomplished by
@@ -116,7 +132,7 @@ a title and abstract, but is otherwise blank.
 \item Log into your \href{http://github.com}{\tt github.com}
 account and
 create a repository with the same name as your top directory
-\verb!sampleCourse!
+\verb!anExampleCourse!
 by clicking the \verb!+! by your account name, as shown
 below.
 
@@ -126,7 +142,7 @@ below.
 
 After selecting \verb!New repository!, a new
 page appears with a field named \verb!Repository name!. Enter
-\verb!sampleCourse! into this field and
+\verb!anExampleCourse! into this field and
 accept all default settings by pressing the
 \verb!Create Repository! button.
 \begin{image}
@@ -140,12 +156,12 @@ touch README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/marcusjbishop/sampleCourse.git
+git remote add origin https://github.com/marcusjbishop/anExampleCourse.git
 git push -u origin master
 \end{verbatim}
 Before executing these commands, return
 to your terminal and ensure that your current directory is
-the root directory \verb!sampleCourse! of your repository.
+the root directory \verb!anExampleCourse! of your repository.
 If your current directory is \verb!example!
 from the previous step you can change to the parent directory by typing
 \begin{verbatim}
@@ -160,7 +176,7 @@ of these commands in place of \verb!marcusjbishop!.
 Note also the \verb!s! in \verb!https!.
 These commands initialize the repository on \href{http://github.com}{\tt github.com}
 and create an empty file named \verb!README.md!
-in the \verb!sampleCourse! directory.
+in the \verb!anExampleCourse! directory.
 \end{remark}
 
 \item Execute the following command.
@@ -235,7 +251,7 @@ activity appearing later in this tutorial
 for more information on creating exercises.
 \end{remark}
 
-\item Change to the top directory \verb!sampleCourse!
+\item Change to the top directory \verb!anExampleCourse!
 and execute the following commands.
 \begin{verbatim}
 git commit -am "Added an exercise"
