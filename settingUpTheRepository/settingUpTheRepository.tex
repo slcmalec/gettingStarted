@@ -26,12 +26,12 @@ While the reader could in principle avoid installing
 to take full advantage of the features of the 
 \href{http://ximera.osu.edu}{\sf Ximera} system.
 
-\begin{warning} Currently {\em anyone} can follow
-the instructions below to create a course on the webserver
+\begin{warning} Currently {\em anyone} can
+create a course on the webserver
 \href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
 This is to say that if you follow the instructions below,
 a new course that {\em you} control will appear on the web,
-visable to all the world. Therefore,
+viable to all the world. Therefore,
 your course should naturally not contain offensive or copyrighted
 materials. However, in the future, it is quite likely that a
 more robust course validation mechanism will be implemented.
@@ -50,13 +50,13 @@ cd anExampleCourse
 \end{verbatim}
 \end{center}
 
-\item A Ximera course consists of a directory (the one
+\item A \href{http://ximera.osu.edu}{\sf Ximera} 
+course consists of a directory (the one
 created above in this example)
 containing a text file called \verb!course.xim!. 
 In this tutorial we will create a simple
-course that has only one activity.
-Using any text editor,
-create and save a file named
+course consisting of only one activity.
+Using any text editor, create and save a file named
 \verb!course.xim! containing the text below.
 
 \begin{verbatim}
@@ -71,9 +71,9 @@ theFirstActivity/theFirstActivity
 The content of the line beginning with \verb!name:!
 specifies the title of your course exactly as it will appear on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
-So in this example, the course will appear
-as \verb!An example course!.
-In order to distinguish your course from
+So without any further changes to \verb!course.xim!
+your course will appear as \verb!An example course!.
+However, in order to distinguish your course from
 other courses on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
 you should change the title to something unique
@@ -90,15 +90,15 @@ In addition to a name and a description,
 the \verb!course.xim! file above specifies that 
 there is one activity file \verb!theFirstActivity.tex!,
 written without the extension \verb!.tex!,  
-located in a directory called \verb!theFirstActivity!.
+and located in a directory called \verb!theFirstActivity!.
 We will create this file and directory in the following step.
 
 Generally courses should contain more than one activity,
 with each activity filename appearing in \verb!course.xim!
-without the \verb!.tex! extension and
+without its \verb!.tex! extension and
 indented to reflect its position in the course hierarchy.
 We recommend placing each
-activity in its own directory of the same name.
+activity in a directory of the same name.
 This facilitates
 sharing activities among collaborators and makes reusing existing
 activities easier.
@@ -107,7 +107,7 @@ activities easier.
 %rather than starting from scratch. 
 We also recommend that the directory and the \LaTeX\ file have exactly
 the same name as the title of the activity,
-with all spaces removed and all words other than the first
+with all spaces removed and all words other than the first word
 capitalized. So for example, if the title of the
 activity were \verb!Plants native to Ohio!
 the \LaTeX\ file \verb!plantsNativeToOhio.tex!
@@ -122,7 +122,8 @@ The \verb!course.xim! file has particular formatting requirements.
 \item The \verb!---!'s encapsulating the name on line~2
 and the description on line~3
 are required, as is the blank line following the second \verb!---!.
-\item Both entries between the \verb!---!'s must exist as single lines. 
+\item All the entries between the \verb!---!'s
+must be written as single lines. 
 In other words, the only newlines permitted are those
 at the end of lines~2 and 3.
 \end{enumerate}
@@ -154,10 +155,11 @@ This activity deals with \verb!Ximera! activities.
 \end{verbatim}
 
 \begin{remark}
-An activity should be in the document class \verb!ximera!
-and should contain the title of the activity
-and an abstract.
-These will both appear on the course website in the navigation area.
+An activity should be composed as a regular
+\LaTeX\ file in the document class \verb!ximera!.
+It should contain the title of the activity and an abstract.
+These will both appear on the course website in the navigation area,
+so the abstract should be short.
 At this stage your activity contains
 a title and an abstract, but is otherwise blank.
 \end{remark}
@@ -167,7 +169,7 @@ account and
 create a repository with the name
 \verb!anExampleCourse!
 by clicking the \verb!+! by your account name, as shown
-below.
+in the image below.
 
 \begin{image}
 \includegraphics[scale=.3]{RepoInit.png}
@@ -176,7 +178,7 @@ below.
 After selecting \verb!New repository! from the dropdown menu, a new
 page appears with a field named \verb!Repository name!. Enter
 \verb!anExampleCourse! into this field and
-accept all default settings by pressing the green
+accept all default the settings by pressing the green
 \verb!Create Repository! button.
 \begin{image}
 \includegraphics[scale=.3]{CreateRepo.png}
@@ -227,17 +229,18 @@ In general a \verb!git add! command must be executed
 every time a new file or directory is created.
 \end{remark}
 
-\item This step is optional. Add a
+\item This step is optional. Type a
 description of your course to the file
 \verb!README.md!.
 
 \begin{remark}
 The content of \verb!README.md! will appear only on
 \href{http://github.com}{\tt github.com}.
-This file is meant to provide a description of your project.
+This file is meant to provide a description of your project
+to other developers.
 \end{remark}
 
-\item Click on the \verb!Settings! button on the
+\item Click the \verb!Settings! button on the
 \href{http://github.com}{\tt github.com} repository page
 and then on \verb!Webhooks & Services!.
 Now click the \verb!Add webhook! button.
@@ -284,11 +287,11 @@ This activity is about creative work.
 The edits above insert
 a multiple-choice question into the \verb!theFirstActivity!
 activity. See the \verb!Question and answer types!
-activity appearing later in this tutorial
+activity later in this tutorial
 for more information on creating exercises.
 \end{remark}
 
-\item Change to the top directory \verb!anExampleCourse!
+\item Change to the directory \verb!anExampleCourse!
 and execute the following commands.
 \begin{verbatim}
 git commit -am "Added an exercise"
@@ -296,7 +299,7 @@ git push
 \end{verbatim}
 If everything went well, you should find your course listed at 
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
-If not, see the \verb!troubleshooting! activity
+If not, see the \verb!troubleshooting! activity in this tutorial
 or send your questions to
 \href{mailto:ximera@math.osu.edu}{\tt ximera@math.osu.edu}.
 \begin{remark} The commands above inform \verb!git! that
