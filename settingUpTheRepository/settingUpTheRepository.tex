@@ -46,7 +46,7 @@ In this tutorial we will create a simple
 course that has only one activity.
 Using any text editor,
 create and save a file named
-\verb!course.xim! containing the content below.
+\verb!course.xim! containing the text below.
 
 \begin{verbatim}
 ---
@@ -75,7 +75,7 @@ such as the name of the course, a description of the course,
 and the names of all \LaTeX\ activity files 
 comprising the course, in the order
 they should be presented to students.
-In addition to a name and description,
+In addition to a name and a description,
 the \verb!course.xim! file above specifies that 
 there is one activity file \verb!theFirstActivity.tex!,
 written without the extension \verb!.tex!,  
@@ -87,14 +87,14 @@ with each activity filename appearing in \verb!course.xim!
 without the \verb!.tex! extension and
 indented to reflect its position in the course hierarchy.
 We recommend placing each
-activity in its own directory, which should have the same name.
+activity in its own directory of the same name.
 This facilitates
 sharing activities among collaborators and makes reusing existing
 activities easier.
 %Later in this course, we will see examples of
 %how to borrow existing activities from other courses
 %rather than starting from scratch. 
-We also recommend that the \LaTeX\ file have exactly
+We also recommend that the directory and the \LaTeX\ file have exactly
 the same name as the title of the activity,
 with all spaces removed and all words other than the first
 capitalized. So for example, if the title of the
@@ -130,13 +130,13 @@ touch theFirstActivity.tex
 \end{verbatim}
 
 \item Using your text editor, open \verb!theFirstActivity.tex!
-and paste the following content. Then save the file.
+and paste in the following text. Then save the file.
 \begin{verbatim}
 \documentclass{ximera}
 \title{The First Activity}
 \begin{document}
 \begin{abstract}
-This activity deals with \verb!Ximera! activities
+This activity deals with \verb!Ximera! activities.
 \end{abstract}
 \maketitle
 \end{document}
@@ -145,13 +145,15 @@ This activity deals with \verb!Ximera! activities
 \begin{remark}
 An activity should be in the document class \verb!ximera!
 and should contain the title of the activity
-and an abstract. At this stage the activity above has
-a title and abstract, but is otherwise blank.
+and an abstract.
+These will both appear on the course website in the navigation area.
+At this stage your activity contains
+a title and an abstract, but is otherwise blank.
 \end{remark}
 
 \item Log into your \href{http://github.com}{\tt github.com}
 account and
-create a repository with the same name as your top directory
+create a repository with the name
 \verb!anExampleCourse!
 by clicking the \verb!+! by your account name, as shown
 below.
@@ -160,16 +162,16 @@ below.
 \includegraphics[scale=.3]{RepoInit.png}
 \end{image}
 
-After selecting \verb!New repository!, a new
+After selecting \verb!New repository! from the dropdown menu, a new
 page appears with a field named \verb!Repository name!. Enter
 \verb!anExampleCourse! into this field and
-accept all default settings by pressing the
+accept all default settings by pressing the green
 \verb!Create Repository! button.
 \begin{image}
 \includegraphics[scale=.3]{CreateRepo.png}
 \end{image}
 \href{http://github.com}{\tt github.com}
-will respond with additional commands similar to
+will respond by printing additional commands similar to
 those shown below.
 \begin{verbatim}
 touch README.md
@@ -181,9 +183,9 @@ git push -u origin master
 \end{verbatim}
 Before executing these commands, return
 to your terminal and ensure that your current directory is
-the root directory \verb!anExampleCourse! of your repository.
+\verb!anExampleCourse!. 
 If your current directory is \verb!theFirstActivity!
-from the previous step you can change to the parent directory by typing
+from the previous step you can change to its parent directory by typing
 \begin{verbatim}
 cd ..
 \end{verbatim}
@@ -199,17 +201,18 @@ and create an empty file named \verb!README.md!
 in the \verb!anExampleCourse! directory.
 \end{remark}
 
-\item Execute the following command.
+\item Execute the following command, still in the
+\verb!anExampleCourse! directory.
 \begin{verbatim}
 git add .
 \end{verbatim}
 \begin{remark}
-Note that the command contains a dot.
-The command adds the newly created directory
+Note that the command above contains a dot at the end.
+This command adds the newly created directory
 \verb!theFirstActivity! and the files
 \verb!theFirstActivity/theFirstActivity.tex!
-and \verb!course.xim! to the your repository.
-In general the command above must be executed
+and \verb!course.xim! to your repository.
+In general a \verb!git add! command must be executed
 every time a new file or directory is created.
 \end{remark}
 
@@ -218,9 +221,9 @@ description of your course to the file
 \verb!README.md!.
 
 \begin{remark}
-In general the content of \verb!README.md! should
-provide a description of your project that will appear only on
+The content of \verb!README.md! will appear only on
 \href{http://github.com}{\tt github.com}.
+This file is meant to provide a description of your project.
 \end{remark}
 
 \item Click on the \verb!Settings! button on the
@@ -234,16 +237,18 @@ into the \verb!Secret! field.
 \begin{image}
 \includegraphics[scale=.3]{Webhook.png}
 \end{image}
-Finally push the green \verb!Add webhook! button at the bottom.
+Finally push the green \verb!Add webhook! button at the bottom
+of the window.
 
 \item In order to have your course listed on
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
-you need to \verb!push! the repository.
-However, since \verb!git! will not allow a \verb!push!
-without any changes to the repository, this is a good point
-to add content in the form of a simple exercise.
+you need to \verb!push! your repository.
+However, since \textsf{git} will not allow a \verb!push!
+if you haven't made any changes to the repository,
+this is a good point to add some further content
+in the form of a simple exercise.
 Update the file \verb!theFirstActivity.tex! 
-that you created above so that it looks like the following. 
+you created above so that it looks like the following. 
 
 \begin{verbatim}
 \documentclass{ximera}
