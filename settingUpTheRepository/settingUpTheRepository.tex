@@ -1,6 +1,7 @@
 \documentclass{ximera}
 \usepackage[colorlinks=true,urlcolor=blue]{hyperref}
 \title{Setting up the repository}
+\def\itemautorefname~#1\null{#1\null}
 \begin{document}
 \begin{abstract}
 Instructions for setting up a repository containing course materials.
@@ -41,8 +42,9 @@ materials. However, in the future, it is quite likely that a
 more robust course validation mechanism will be implemented.
 \end{warning}
 
+\section{Setting up a Ximera repository from scratch}
 \begin{enumerate}
-\item Create a directory for your course files
+\item\label{Mkdir} Create a directory for your course files
 and change to that directory.
 In this example, we will create a directory called
 \verb!anExampleCourse!.
@@ -168,9 +170,9 @@ At this stage your activity contains
 a title and an abstract, but is otherwise blank.
 \end{remark}
 
-\item Log into your \href{http://github.com}{\tt github.com}
-account and
-create a repository with the name
+\item\label{GithubCreate}
+Log into your \href{http://github.com}{\tt github.com}
+account and create a repository with the name
 \verb!anExampleCourse!
 by clicking the \verb!+! by your account name, as shown
 in the image below.
@@ -258,7 +260,8 @@ into the \verb!Secret! field.
 Finally push the green \verb!Add webhook! button at the bottom
 of the window.
 
-\item In order to have your course served by
+\item\label{FirstExercise}
+In order to have your course served by
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
 you need to \verb!push! your repository.
 However, since \textsf{git} will not allow a \verb!push!
@@ -317,4 +320,43 @@ You should execute similar commands whenever you
 change files in your repository.
 \end{remark}
 \end{enumerate}
+
+\section{Other ways to set up a Ximera repository}
+Users familar with
+\href{http://github.com}{\tt github.com}
+will have probably noticed that
+the order of the instructions above can be permuted.
+One possibility is to begin by creating the repository on
+\href{http://github.com}{\tt github.com}
+as in step~\autoref{GithubCreate} above.
+Then instead of executing the commands
+that follow to initialize the local copy of the repository,
+one clones the copy on 
+\href{http://github.com}{\tt github.com} using a
+\verb!git clone! command.
+This obviates step \autoref{Mkdir} since cloning
+a \href{http://git-scm.com}{\sf git} repository
+creates a directory and initializes
+it as a \href{http://git-scm.com}{\sf git} repository.
+
+From here one can create 
+\href{http://ximera.osu.edu}{\sf Ximera} 
+activities as in step~\autoref{FirstExercise}.
+You should issue a \verb!git add! command after creating
+a new file or directory and a \verb!git commit!
+command followed by a \verb!git push! command
+periodically to transmit your most recent changes to
+\href{http://github.com}{\tt github.com}.
+You should also add the name of your file without
+its \verb!.tex! extension to the file \verb!course.xim!
+it the position relative to other activities where
+you want the activity to appear.
+Observe however that once the filename of an activity
+appears in \verb!course.xim! the activity will appear
+to students. It might therefore be preferable
+to {\em not} add the filename to \verb!course.xim!
+until the activity is ready to show to students.
+During the editing phase you can process the file using \LaTeX\
+periodically in order to view the activity.
+
 \end{document}
