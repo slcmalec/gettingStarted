@@ -1,4 +1,5 @@
 \documentclass{ximera}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
 \title{Setting up the repository}
 \def\itemautorefname~#1\null{#1\null}
@@ -15,10 +16,7 @@ course up and running. It guides the reader through the creation of a
 repository, the connection of the repository to
 \href{http://github.com}{\tt github.com}
 through a webhook, and the creation of an activity containing a 
-simple exercise. We emphasize that you will be creating
-a course from scratch in this tutorial. Other possible ways to create
-courses, such as forking existing courses, will
-not be discussed here.
+simple exercise.
 
 The instructions below assume that the reader will be
 working on a computer running either Linux or OS X.
@@ -42,7 +40,11 @@ materials. However, in the future, it is quite likely that a
 more robust course validation mechanism will be implemented.
 \end{warning}
 
-\section{Setting up a Ximera repository from scratch}
+\subsection{Setting up a Ximera repository from scratch}
+This section descdribes how to create a course from scratch.
+Other possible ways to create
+courses, such as forking existing courses, will
+be discussed in \autoref{ForkClone}
 \begin{enumerate}
 \item\label{Mkdir} Create a directory for your course files
 and change to that directory.
@@ -147,7 +149,8 @@ cd theFirstActivity
 touch theFirstActivity.tex
 \end{verbatim}
 
-\item Using your text editor, open \verb!theFirstActivity.tex!
+\item\label{FirstExercise}
+Using your text editor, open \verb!theFirstActivity.tex!
 and paste in the following text. Then save the file.
 \begin{verbatim}
 \documentclass{ximera}
@@ -260,7 +263,7 @@ into the \verb!Secret! field.
 Finally push the green \verb!Add webhook! button at the bottom
 of the window.
 
-\item\label{FirstExercise}
+\item
 In order to have your course served by
 \href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
 you need to \verb!push! your repository.
@@ -321,25 +324,27 @@ change files in your repository.
 \end{remark}
 \end{enumerate}
 
-\section{Other ways to set up a Ximera repository}
-Users familar with
-\href{http://github.com}{\tt github.com}
-will have probably noticed that
-the order of the instructions above can be permuted.
+\subsection{Other ways to set up a Ximera repository}
+There are other ways to create a
+\href{http://ximera.osu.edu}{\sf Ximera} course.
 One possibility is to begin by creating the repository on
 \href{http://github.com}{\tt github.com}
 as in step~\autoref{GithubCreate} above.
 Then instead of executing the commands
 that follow to initialize the local copy of the repository,
-one clones the copy on 
+you could {\em clone} the copy on 
 \href{http://github.com}{\tt github.com} using a
 \verb!git clone! command.
-This obviates step \autoref{Mkdir} since cloning
-a \href{http://git-scm.com}{\sf git} repository
-creates a directory and initializes
+Alternately you could {\em fork} an existing repository,
+either your own or someone else's.
+See the \href{http://git-scm.com}{{\sf git} manual}
+for more information about the \verb!clone! and \verb!fork! commands.
+Both possibilities above obviate step \autoref{Mkdir} since cloning
+or forking a \href{http://git-scm.com}{\sf git} repository
+creates a local directory and initializes
 it as a \href{http://git-scm.com}{\sf git} repository.
 
-From here one can create 
+From here you can create 
 \href{http://ximera.osu.edu}{\sf Ximera} 
 activities as in step~\autoref{FirstExercise}.
 You should issue a \verb!git add! command after creating
@@ -347,7 +352,7 @@ a new file or directory and a \verb!git commit!
 command followed by a \verb!git push! command
 periodically to transmit your most recent changes to
 \href{http://github.com}{\tt github.com}.
-You should also add the name of your file without
+You should also add the name of your activity file without
 its \verb!.tex! extension to the file \verb!course.xim!
 it the position relative to other activities where
 you want the activity to appear.
@@ -359,19 +364,19 @@ until the activity is ready for students.
 During the editing phase you still view
 the activity by processing it with \LaTeX\ and inspecting
 the resulting PDF file, which might be helpful 
-in any case for editing.
+in any case for finding and correcting mistakes.
 
 Still another possitility is to create and edit {\em all} files
 and directories directly on the
 \href{http://github.com}{\tt github.com} web site.
-In this way One could produce an entire
+In this way you could produce an entire
 \href{http://ximera.osu.edu}{\sf Ximera} 
-course {\em witihout} a local copy of the repository.
+course {\em without} a local copy of the repository.
 This would have the advantage of not requiring the
 instructor to install the
 \href{http://git-scm.com}{\sf git} or
 \href{http://texlive.org}{\LaTeX}\ software
-or learn any of the
+or to learn any of the
 \href{http://git-scm.com}{\sf git} or Unix
 commands above. This could be useful when working temporarily on
 someone else's computer, for example.
