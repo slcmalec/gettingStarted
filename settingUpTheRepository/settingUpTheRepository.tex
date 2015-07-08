@@ -1,4 +1,6 @@
 \documentclass{ximera}
+\def\sectionautorefname~#1\null{\S#1\null}
+\def\subsectionautorefname~#1\null{\S#1\null}
 \title{Setting up the repository}
 \def\itemautorefname~#1\null{#1\null}
 \begin{document}
@@ -32,7 +34,7 @@ create a course on the webserver
 \href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
 This is to say that if you follow the instructions below,
 a new course that {\em you} control will appear on the web,
-viable to all the world. It goes without saying therefore that
+visible to all the world. It goes without saying therefore that
 your course should not contain offensive or copyrighted
 materials. However, in the future, it is quite likely that a
 more robust course validation mechanism will be implemented.
@@ -322,7 +324,7 @@ change files in your repository.
 \end{remark}
 \end{enumerate}
 
-\subsection{Other ways to set up a Ximera repository}
+\subsection{Other ways to set up a Ximera repository}\label{ForkClone}
 There are other ways to create a
 \href{http://ximera.osu.edu}{\sf Ximera} course.
 One possibility is to begin by creating the repository on
