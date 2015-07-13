@@ -323,27 +323,8 @@ change files in your repository.
 \end{remark}
 \end{enumerate}
 
-\subsection{Other ways to set up a Ximera repository}\label{ForkClone}
-There are other ways to create a
-\href{http://ximera.osu.edu}{\sf Ximera} course.
-One possibility is to begin by creating the repository on
-\href{http://github.com}{\tt github.com}
-as in step~\autoref{GithubCreate} above.
-Then instead of executing the commands
-that follow to initialize the local copy of the repository,
-you could {\em clone} the copy on 
-\href{http://github.com}{\tt github.com} using a
-\verb!git clone! command.
-Alternately you could {\em fork} an existing repository,
-either your own or someone else's.
-See the \href{http://git-scm.com}{{\sf git} manual}
-for more information about the \verb!clone! and \verb!fork! commands.
-Both possibilities above obviate step \autoref{Mkdir} since cloning
-or forking a \href{http://git-scm.com}{\sf git} repository
-creates a local directory and initializes
-it as a \href{http://git-scm.com}{\sf git} repository.
-
-From here you can create 
+\subsection{Creating further activities}
+From here you can create further 
 \href{http://ximera.osu.edu}{\sf Ximera} 
 activities as in step~\autoref{FirstExercise}.
 You should issue a \verb!git add! command after creating
@@ -364,6 +345,26 @@ During the editing phase you still view
 the activity by processing it with \LaTeX\ and inspecting
 the resulting PDF file, which might be helpful 
 in any case for finding and correcting mistakes.
+
+\subsection{Other ways to set up a Ximera repository}\label{ForkClone}
+There are other ways to create a
+\href{http://ximera.osu.edu}{\sf Ximera} course.
+One possibility is to begin by creating the repository on
+\href{http://github.com}{\tt github.com}
+as in step~\autoref{GithubCreate} above.
+Then instead of executing the commands
+that follow to initialize the local copy of the repository,
+you could {\em clone} the copy on 
+\href{http://github.com}{\tt github.com} using a
+\verb!git clone! command.
+Alternately you could {\em fork} an existing repository,
+either your own or someone else's.
+See the \href{http://git-scm.com}{{\sf git} manual}
+for more information about the \verb!clone! and \verb!fork! commands.
+Both possibilities above obviate step \autoref{Mkdir} since cloning
+or forking a \href{http://git-scm.com}{\sf git} repository
+creates a local directory and initializes
+it as a \href{http://git-scm.com}{\sf git} repository.
 
 Still another possibility is to create and edit {\em all} files
 and directories directly on the
