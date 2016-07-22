@@ -54,61 +54,59 @@ Open a terminal session and type the following commands.
 \begin{verbatim}
 mkdir anExampleCourse
 cd anExampleCourse 
+mkdir theFirstActivity
+mkdir theExampleCourse
+cd theExampleCourse 
 \end{verbatim}
 \end{center}
-
-\item A \href{http://ximera.osu.edu}{\sf Ximera} 
-course consists of a directory (the one
-created above in this example)
-containing a text file called \verb!course.xim!. 
-In this tutorial we will create a simple
-course consisting of only one activity.
-Using any text editor, create and save a file named
-\verb!course.xim! containing the text below.
+\item A \href{http://ximera.osu.edu}{\sf Ximera} course consists of a
+   \item directory (\verb!anExampleCourse!)  containing a directories
+     (\verb!theFirstActivity!, \verb!theExampleCourse!) that all
+     contain \LaTeX\ files using the \verb!ximera! document class
+     \textbf{except for exactly one} that contains a \LaTeX\ file
+     using the \verb!xourse! document class
+     (\verb!theExampleCourse.tex!). We describe
+     \verb!theExampleCourse.tex! now:
 
 \begin{verbatim}
----
-name: An example course
-description: This is a Ximera activity explaining how to get started with Ximera for course instructors.
----
+\documentclass{xourse}
 
-theFirstActivity/theFirstActivity
+\title{An example course}%% This is the Name of your course, personalize it!
+
+\begin{document}
+\begin{abstract} %% This describes your course
+This is a Ximera activity explaining how to get started with Ximera for course instructors.
+\end{abstract}
+\maketitle
+
+%% Here we have a listing of the activities. 
+\activity{../theFirstActivity/theFirstActivity}
+
+\end{document}
 \end{verbatim}
-\begin{warning}
-The content of the line beginning with \verb!name:!
-specifies the title of your course exactly as it will appear on
-\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
-Without any further changes to \verb!course.xim!
-your course will be listed as \verb!An example course!.
-However, in order to distinguish your course from
-other courses on
-\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
-you should change the title to something unique
-such as \verb!ISU Math 104!.
-\end{warning}
+
+Now make sure you are in the directory \verb!theExampleCourse! and
+type in the terminal \verb!git add theExampleCourse.tex!. This makes
+our new file (and the directory containing it, part of our git
+repository.
+
 
 \begin{remark}
-In general the file \verb!course.xim! specifies course information
-such as the name of the course, a description of the course,
-and the names of all \LaTeX\ activity files 
-comprising the course, in the order
-they should be presented to students.
-In addition to a name and a description,
-the \verb!course.xim! file above specifies that 
-there is one activity file \verb!theFirstActivity.tex!,
-written without the extension \verb!.tex!,  
-and located in a directory called \verb!theFirstActivity!.
-We will create this file and directory in the following step.
+In general the file with the \verb!xourse! document class specifies
+course information such as the name of the course, a description of
+the course, and the names of all \LaTeX\ activity files comprising the
+course, in the order they should be presented to students.  In
+addition to a name and a description, \verb!theExampleCourse.tex!
+  above specifies that there is one activity file
+  \verb!theFirstActivity.tex!, written with or without the extension
+  \verb!.tex!, and located in a directory called
+  \verb!theFirstActivity!.  We will create this file and directory in
+  the following step.
 
-Generally courses should contain more than one activity,
-with each activity filename appearing in \verb!course.xim!
-without its \verb!.tex! extension and
-indented to reflect its position in the course hierarchy.
-We recommend placing each
-activity in a directory of the same name.
-This facilitates
-sharing activities among collaborators and makes reusing existing
-activities easier.
+Generally courses should contain more than one activity. We recommend
+placing each activity in a directory of the same name.  This
+facilitates sharing activities among collaborators and makes reusing
+existing activities easier.
 %Later in this course, we will see examples of
 %how to borrow existing activities from other courses
 %rather than starting from scratch. 
@@ -122,20 +120,6 @@ would be located in a directory called
 \verb!plantsNativeToOhio!.
 \end{remark}
 
-\begin{warning}
-The \verb!course.xim! file has particular formatting requirements.
-\begin{enumerate}
-\item The name of the file must be exactly \verb!course.xim!
-\item The \verb!---!'s encapsulating the name on line~2
-and the description on line~3
-are required, as is the blank line following the second \verb!---!.
-\item All the entries between the \verb!---!'s
-must be written as single lines. 
-In other words, the only newlines permitted are those
-at the end of lines~2 and 3.
-\end{enumerate}
-\end{warning}
-
 \item In your terminal create a new directory
 in the \verb!anExampleCourse! directory
 called \verb!theFirstActivity!. The \verb!theFirstActivity!
@@ -146,6 +130,7 @@ executing the commands below.
 mkdir theFirstActivity 
 cd theFirstActivity 
 touch theFirstActivity.tex
+git add theFirstActivity.tex
 \end{verbatim}
 
 \item\label{FirstExercise}
@@ -220,21 +205,6 @@ Note also the \verb!s! in \verb!https!.
 These commands initialize the repository on \href{http://github.com}{\tt github.com}
 and create an empty file named \verb!README.md!
 in the \verb!anExampleCourse! directory.
-\end{remark}
-
-\item Execute the following command, still in the
-\verb!anExampleCourse! directory.
-\begin{verbatim}
-git add .
-\end{verbatim}
-\begin{remark}
-Note that the command above contains a dot at the end.
-This command adds the newly created directory
-\verb!theFirstActivity! and the files
-\verb!theFirstActivity/theFirstActivity.tex!
-and \verb!course.xim! to your repository.
-In general a \verb!git add! command must be executed
-every time a new file or directory is created.
 \end{remark}
 
 \item This step is optional. Type a
