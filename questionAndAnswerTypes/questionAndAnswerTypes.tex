@@ -93,16 +93,28 @@ Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
 \end{question}
 
 \begin{remark}
-  The plus and minus muttons add and subtract columns or rows.  
+  The plus and minus buttons add and subtract columns or rows.  
 \end{remark}
 
 \section{free-response}
 
 The free response environment gives students access to a \LaTeX\ editor. 
 
-\begin{freeResponse}
-  This is the model solution.
-\end{freeResponse}
+\begin{verbatim}
+\begin{question}
+	Question goes here!
+	\begin{freeResponse}
+	This is the model solution %You don't actually need anything in between the begin and end line.
+	\end{freeResponse} 
+\end{question}
+\end{verbatim}
+
+\begin{question}
+	Question goes here!
+	\begin{freeResponse}
+	This is the model solution %You don't actually need anything in between the begin and end line.
+	\end{freeResponse} 
+\end{question}
 
 \begin{remark}
 Clicking on \verb!View model solution! shows the user
