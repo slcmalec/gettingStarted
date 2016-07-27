@@ -10,28 +10,25 @@ Instructions for setting up a repository containing course materials.
 \maketitle
 
 This tutorial is intended to help course instructors get a
-\href{http://ximera.osu.edu}{\sf Ximera} 
-course up and running. It guides the reader through the creation of a
-\href{http://git-scm.com}{\sf git}
+\link[Ximera]{http://ximera.osu.edu} course up and running. It guides
+the reader through the creation of a \link[git]{http://git-scm.com}
 repository, the connection of the repository to
-\href{http://github.com}{\tt github.com}
-through a webhook, and the creation of an activity containing a 
-simple exercise.
+\link[github]{http://github.com} through a webhook, and the
+creation of an activity containing a simple exercise.
 
-The instructions below assume that the reader will be
-working on a computer running either Linux or OS X.
-Similar instructions for Windows users will be composed
-at a later stage, but the Linux instructions below will probably
-be sufficient for Windows users with some familiarity with Unix commands.
-While the reader could in principle avoid installing 
-\href{http://texlive.org}{\LaTeX}\ and
-\href{http://git-scm.com}{\sf git} these programs are necessary
-to take full advantage of the features of the 
-\href{http://ximera.osu.edu}{\sf Ximera} system.
+The instructions below assume that the reader will be working on a
+computer running either Linux or OS X.  Similar instructions for
+Windows users will be composed at a later stage, but the Linux
+instructions below will probably be sufficient for Windows users with
+some familiarity with Unix commands.  While the reader could in
+principle avoid installing \link[\LaTeX]{http://texlive.org} and
+\link[git]{http://git-scm.com} these programs are necessary to take
+full advantage of the features of the
+\link[Ximera]{http://ximera.osu.edu} system.
 
 \begin{warning} Currently {\em anyone} can
 create a course on the webserver
-\href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
+\link[Ximera]{http://ximera.osu.edu}.
 This is to say that if you follow the instructions below,
 a new course that {\em you} control will appear on the web,
 visible to all the world. It goes without saying therefore that
@@ -50,7 +47,6 @@ and change to that directory.
 In this example, we will create a directory called
 \verb!anExampleCourse!.
 Open a terminal session and type the following commands.
-\begin{center}
 \begin{verbatim}
 mkdir anExampleCourse
 cd anExampleCourse 
@@ -58,8 +54,7 @@ mkdir theFirstActivity
 mkdir theExampleCourse
 cd theExampleCourse 
 \end{verbatim}
-\end{center}
-\item A \href{http://ximera.osu.edu}{\sf Ximera} course consists of a
+\item A \link[Ximera]{http://ximera.osu.edu} course consists of a
    \item directory (\verb!anExampleCourse!)  containing a directories
      (\verb!theFirstActivity!, \verb!theExampleCourse!) that all
      contain \LaTeX\ files using the \verb!ximera! document class
@@ -157,12 +152,10 @@ At this stage your activity contains
 a title and an abstract, but is otherwise blank.
 \end{remark}
 
-\item\label{GithubCreate}
-Log into your \href{http://github.com}{\tt github.com}
-account and create a repository with the name
-\verb!anExampleCourse!
-by clicking the \verb!+! by your account name, as shown
-in the image below.
+\item\label{GithubCreate} Log into your
+  \link[github.com]{http://github.com} account and create a repository
+  with the name \verb!anExampleCourse!  by clicking the \verb!+! by
+  your account name, as shown in the image below.
 
 \begin{image}
 \includegraphics[scale=.3]{RepoInit.png}
@@ -176,7 +169,7 @@ accept all the default settings by pressing the green
 \begin{image}
 \includegraphics[scale=.3]{CreateRepo.png}
 \end{image}
-\href{http://github.com}{\tt github.com}
+\link[github.com]{http://github.com}
 will respond by printing additional commands similar to
 those shown below.
 \begin{verbatim}
@@ -196,7 +189,7 @@ from the previous step you can change to its parent directory by typing
 cd ..
 \end{verbatim}
 Now execute the commands returned by
-\href{http://github.com}{\tt github.com}.
+\link[github.com]{http://github.com}.
 
 \begin{remark}
 Note that your username appears in the fifth line
@@ -213,19 +206,17 @@ description of your course in the file
 
 \begin{remark}
 The content of \verb!README.md! will appear only on
-\href{http://github.com}{\tt github.com}.
+\link[github.com]{http://github.com}
 This file is meant to provide a description of your project
 to other developers.
 \end{remark}
 
 \item Click the \verb!Settings! button on your
-\href{http://github.com}{\tt github.com} repository page
-and then on \verb!Webhooks & Services!.
-Now click the \verb!Add webhook! button.
-Type \verb!http://ximera.osu.edu/github!
-into the \verb!Payload URL! field and
-\verb!8mi0tsrje9n3asPu86XC198G1XSdZj!
-into the \verb!Secret! field.
+  \link[github.com]{http://github.com} repository page and then on
+  \verb!Webhooks & Services!.  Now click the \verb!Add webhook!
+  button.  Type \verb!http://ximera.osu.edu/github!  into the
+  \verb!Payload URL! field and \verb!8mi0tsrje9n3asPu86XC198G1XSdZj!
+  into the \verb!Secret! field.
 \begin{image}
 \includegraphics[scale=.3]{Webhook.png}
 \end{image}
@@ -234,7 +225,7 @@ of the window.
 
 \item
 In order to have your course served by
-\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}
+\link[ximera.osu.edu/course]{http://ximera.osu.edu/course}
 you need to \verb!push! your repository.
 However, since \textsf{git} will not allow a \verb!push!
 if you haven't made any changes to the repository,
@@ -276,20 +267,16 @@ and execute the following commands.
 git commit -am "Added an exercise"
 git push
 \end{verbatim}
-If everything went well, you should find your course listed at 
-\href{http://ximera.osu.edu/course}{\tt ximera.osu.edu/course}.
-If not, see the {\sf Troubleshooting} activity in this tutorial
-or send your questions to
-\href{mailto:ximera@math.osu.edu}{\tt ximera@math.osu.edu}.
+If everything went well, you should find your course listed at
+\link[ximera.osu.edu/course]{http://ximera.osu.edu/course}.  If not,
+see the {\sf Troubleshooting} activity in this tutorial or send your
+questions to \link[ximera@math.osu.edu]{mailto:ximera@math.osu.edu}.
 \begin{remark} The commands above inform 
-\href{http://git-scm.com}{\sf git} that
-changes have been made to your repository and 
-communicates them to
-\href{http://github.com}{\tt github.com}
-which in turn communicates them to
-\href{http://ximera.osu.edu}{\tt ximera.osu.edu}.
-You should execute similar commands whenever you
-change files in your repository.
+\link[git]{http://git-scm.com} that changes have been made to your
+repository and communicates them to
+\link[github.com]{http://github.com} which in turn communicates them
+to \link[ximera.osu.ed]{http://ximera.osu.edu}.  You should execute
+similar commands whenever you change files in your repository.
 \end{remark}
 \end{enumerate}
 
