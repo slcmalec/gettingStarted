@@ -13,27 +13,27 @@ Ximera supports many exercise types.
 
 \section{Basic Function Answer Type}	
 \begin{verbatim}
-         $3\times 2 = $ \answer{6}
+         $3\times 2 = \answer{6}$
 \end{verbatim}
 
 Will produce the question:
 
 \begin{question}
-  $3\times 2 = $ \answer{6}
+  $3\times 2 = \answer{6}$
 \end{question}
 
 In addition to numerical answers, we also support elementary functions:
 
 \begin{verbatim}
     \begin{question}
-         $ \frac{\partial}{\partial x} x^2\sin(y) = $ \answer{2xsin(y)}
+         $ \frac{\partial}{\partial x} x^2\sin(y) =  \answer{2x\sin(y)}$
     \end{question}
 \end{verbatim}
 
 Produces:
 
 \begin{question}
-  $ \frac{\partial}{\partial x} x^2\sin(y) = $ \answer{2xsin(y)}
+  $ \frac{\partial}{\partial x} x^2\sin(y) = \answer{2x\sin(y)}$
 \end{question}
 
 \begin{remark}
@@ -93,16 +93,28 @@ Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
 \end{question}
 
 \begin{remark}
-  The plus and minus muttons add and subtract columns or rows.  
+  The plus and minus buttons add and subtract columns or rows.  
 \end{remark}
 
 \section{free-response}
 
 The free response environment gives students access to a \LaTeX\ editor. 
 
-\begin{freeResponse}
-  This is the model solution.
-\end{freeResponse}
+\begin{verbatim}
+\begin{question}
+	Question goes here!
+	\begin{freeResponse}
+	This is the model solution %You don't actually need anything in between the begin and end line.
+	\end{freeResponse} 
+\end{question}
+\end{verbatim}
+
+\begin{question}
+	Question goes here!
+	\begin{freeResponse}
+	This is the model solution %You don't actually need anything in between the begin and end line.
+	\end{freeResponse} 
+\end{question}
 
 \begin{remark}
 Clicking on \verb!View model solution! shows the user
