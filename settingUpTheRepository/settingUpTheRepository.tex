@@ -195,7 +195,7 @@ Now execute the commands returned by
 Note that your username appears in the fifth line
 of these commands in place of \verb!marcusjbishop!.
 Note also the \verb!s! in \verb!https!.
-These commands initialize the repository on \href{http://github.com}{\tt github.com}
+These commands initialize the repository on \link[github.com]{http://github.com}
 and create an empty file named \verb!README.md!
 in the \verb!anExampleCourse! directory.
 \end{remark}
@@ -281,55 +281,46 @@ similar commands whenever you change files in your repository.
 \end{enumerate}
 
 \subsection{Creating further activities}
-From here you can create further \href{http://ximera.osu.edu}{\sf
-  Ximera} activities as in step~\autoref{FirstExercise}.  You should
-issue a \verb!git add! command after creating a new file or directory
-and a \verb!git commit!  command followed by a \verb!git push! command
+From here you can create further \link[Ximera]{http://ximera.osu.edu}
+activities as in step~\autoref{FirstExercise}.  You should issue a
+\verb!git add! command after creating a new file or directory and a
+\verb!git commit!  command followed by a \verb!git push! command
 periodically to transmit your most recent changes to
-\href{http://github.com}{\tt github.com}.  You should also add the
-name of your activity file to the \verb!xourse! file in the position
-relative to other activities where you want the activity to appear.
-Observe however that once the filename appears in the \verb!xourse!
-  file the corresponding activity will appear to students. It might
-  therefore be preferable to create a separate branch on GitHub until
-  the activity is ready for students.  During the editing phase you
-  still view the activity by processing it with \LaTeX\ and inspecting
-  the resulting PDF file, which might be helpful in any case for
-  finding and correcting mistakes.
+\link[github.com]{http://github.com}.  You should also add the name of
+your activity file to the \verb!xourse! file in the position relative
+to other activities where you want the activity to appear.  Observe
+however that once the filename appears in the \verb!xourse!  file the
+corresponding activity will appear to students. It might therefore be
+preferable to create a separate branch on GitHub until the activity is
+ready for students.  During the editing phase you still view the
+activity by processing it with \LaTeX\ and inspecting the resulting
+PDF file, which might be helpful in any case for finding and
+correcting mistakes.
 
 \subsection{Other ways to set up a Ximera repository}\label{ForkClone}
-There are other ways to create a
-\href{http://ximera.osu.edu}{\sf Ximera} course.
-One possibility is to begin by creating the repository on
-\href{http://github.com}{\tt github.com}
-as in step~\autoref{GithubCreate} above.
-Then instead of executing the commands
-that follow to initialize the local copy of the repository,
-you could {\em clone} the copy on 
-\href{http://github.com}{\tt github.com} using a
-\verb!git clone! command.
-Alternately you could {\em fork} an existing repository,
-either your own or someone else's.
-See the \href{http://git-scm.com}{{\sf git} manual}
-for more information about the \verb!clone! and \verb!fork! commands.
-Both possibilities above obviate step \autoref{Mkdir} since cloning
-or forking a \href{http://git-scm.com}{\sf git} repository
-creates a local directory and initializes
-it as a \href{http://git-scm.com}{\sf git} repository.
+There are other ways to create a \link[Ximera]{http://ximera.osu.edu}
+course.  One possibility is to begin by creating the repository on
+\link[github.com]{http://github.com} as in step~\autoref{GithubCreate}
+above.  Then instead of executing the commands that follow to
+initialize the local copy of the repository, you could {\em clone} the
+copy on \link[github.com]{http://github.com} using a \verb!git clone!
+  command.  Alternately you could {\em fork} an existing repository,
+  either your own or someone else's.  See the \link[git
+    manual]{http://git-scm.com} for more information about the
+  \verb!clone! and \verb!fork! commands.  Both possibilities above
+  obviate step \autoref{Mkdir} since cloning or forking a
+  \link[git]{http://git-scm.com} repository creates a local directory
+  and initializes it as a \link[git]{http://git-scm.com} repository.
 
-Still another possibility is to create and edit {\em all} files
-and directories directly on the
-\href{http://github.com}{\tt github.com} web site.
-In this way you could produce an entire
-\href{http://ximera.osu.edu}{\sf Ximera} 
-course {\em without} a local copy of the repository.
-This would have the advantage of not requiring the
-instructor to install the
-\href{http://git-scm.com}{\sf git} or
-\href{http://texlive.org}{\LaTeX}\ software
-or to learn any of the
-\href{http://git-scm.com}{\sf git} or Unix
-commands above. This could be useful when working temporarily on
-someone else's computer, for example.
+Still another possibility is to create and edit {\em all} files and
+directories directly on the \link[github.com]{http://github.com} web
+site.  In this way you could produce an entire
+\link[Ximera]{http://ximera.osu.edu} course {\em without} a local copy
+of the repository.  This would have the advantage of not requiring the
+instructor to install the \link[git]{http://git-scm.com} or
+\link[\LaTeX]{http://texlive.org} software or to learn any of the
+\link[git]{http://git-scm.com} or Unix commands above. This could be
+useful when working temporarily on someone else's computer, for
+example.
 
 \end{document}
