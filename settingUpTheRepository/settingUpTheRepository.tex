@@ -12,9 +12,8 @@ Instructions for setting up a repository containing course materials.
 This tutorial is intended to help course instructors get a
 \link[Ximera]{http://ximera.osu.edu} course up and running. It guides
 the reader through the creation of a \link[git]{http://git-scm.com}
-repository, the connection of the repository to
-\link[github]{http://github.com} through a webhook, and the
-creation of an activity containing a simple exercise.
+repository and the creation of an activity containing a simple
+exercise.
 
 The instructions below assume that the reader will be working on a
 computer running either Linux or OS X.  Similar instructions for
@@ -210,29 +209,14 @@ The content of \verb!README.md! will appear only on
 This file is meant to provide a description of your project
 to other developers.
 \end{remark}
-
-\item Click the \verb!Settings! button on your
-  \link[github.com]{http://github.com} repository page and then on
-  \verb!Webhooks & Services!.  Now click the \verb!Add webhook!
-  button.  Type \verb!http://ximera.osu.edu/github!  into the
-  \verb!Payload URL! field and \verb!8mi0tsrje9n3asPu86XC198G1XSdZj!
-  into the \verb!Secret! field.
-\begin{image}
-\includegraphics[scale=.3]{Webhook.png}
-\end{image}
-Finally push the green \verb!Add webhook! button at the bottom
-of the window.
-
-\item
-In order to have your course served by
-\link[ximera.osu.edu/course]{http://ximera.osu.edu/course}
-you need to \verb!push! your repository.
-However, since \textsf{git} will not allow a \verb!push!
-if you haven't made any changes to the repository,
-this is a good point to add some further content
-in the form of a simple exercise.
-Update the file \verb!theFirstActivity.tex! 
-you created above so that it looks like the following. 
+\item In order to have your course served by
+  \link[ximera.osu.edu/course]{http://ximera.osu.edu/course} you need
+  to \verb!push! your repository.  However, since \textsf{git} will
+  not allow a \verb!push!  if you haven't made any changes to the
+  repository, this is a good point to add some further content in the
+  form of a simple exercise.  Update the file
+  \verb!theFirstActivity.tex!  you created above so that it looks like
+  the following.
 
 \begin{verbatim}
 \documentclass{ximera}
