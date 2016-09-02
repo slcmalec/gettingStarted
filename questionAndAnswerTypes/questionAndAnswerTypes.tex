@@ -44,7 +44,9 @@ $100$ different complex numbers, and seeing if the results are
 of these functions to circumvent domain issues.
 \end{remark}
 
-\section{Multiple Choice Answer Type}
+\section{Choice Answer Type}
+
+\subsection{Multiple Choice}
 
 \begin{verbatim}
 \begin{question}
@@ -72,29 +74,61 @@ Produces:
   Multiple choice answers appear in the order you type them. 
 \end{remark}
 
-\section{Matrix Answer Type}
 
-We also support matrices of expressions.
+\subsection{Select All}
 
 \begin{verbatim}
 \begin{question}
-Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
-    \begin{matrixAnswer}
-	    correctMatrix = [['x','y'],['xy','z+1']]
-    \end{matrixAnswer}
+  Which of the following numbers are even?
+  \begin{selectAll}
+    \choice[correct]{$2$}
+    \choice{$1$}
+    \choice[correct]{$-4$}
+    \choice[correct]{$0$}
+  \end{selectAll}
 \end{question}
 \end{verbatim}
 
+Produces:
+
 \begin{question}
-  Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
-  \begin{matrixAnswer}
-    correctMatrix = [['x','y'],['xy','z+1']]
-  \end{matrixAnswer}
+  Which of the following numbers are even?
+  \begin{selectAll}
+    \choice[correct]{$2$}
+    \choice{$1$}
+    \choice[correct]{$-4$}
+    \choice[correct]{$0$}
+  \end{selectAll}
 \end{question}
 
 \begin{remark}
-  The plus and minus buttons add and subtract columns or rows.  
+  Select All answers appear in the order you type them. 
 \end{remark}
+
+
+%% \section{Matrix Answer Type}
+
+%% We also support matrices of expressions.
+
+%% \begin{verbatim}
+%% \begin{question}
+%% Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
+%%     \begin{matrixAnswer}
+%% 	    correctMatrix = [['x','y'],['xy','z+1']]
+%%     \end{matrixAnswer}
+%% \end{question}
+%% \end{verbatim}
+
+%% \begin{question}
+%%   Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
+%%   \begin{matrixAnswer}
+%%     correctMatrix = [['x','y'],['xy','z+1']]
+%%   \end{matrixAnswer}
+%% \end{question}
+
+%% \begin{remark}
+%%   The plus and minus buttons add and subtract columns or rows.  
+%% \end{remark}
 
 \section{free-response}
 

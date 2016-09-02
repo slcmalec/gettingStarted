@@ -5,11 +5,11 @@
 \begin{abstract}
   Hints can contain questions.
 \end{abstract}
-
 \maketitle
 
 \section{Basic hints}
-We can add hints to a question to assist students who are having problems
+We can add hints to a question to assist students who are having
+problems
 
 \begin{verbatim}
 \begin{question}
@@ -31,11 +31,11 @@ We can add hints to a question to assist students who are having problems
     \begin{hint}
       $3\times 2=6$
     \end{hint}
-    $3\times 2 = $ \answer{6}
+    $3\times 2 =  \answer{6}$
 \end{question}
 \end{verbatim}
 
-The code above produces the question below with a \verb!Show Hint! 
+The code above produces the question below with a \verb|Show Hint| 
 button that appears to the right.
 
 \begin{question}
@@ -44,20 +44,20 @@ button that appears to the right.
     \end{hint}
     \begin{hint}
       \begin{image}
-      \begin{tikzpicture}
-        \draw (0,0) circle (4pt);
-        \draw (1,0) circle (4pt);
-        \draw (2,0) circle (4pt);
-        \draw (0,1) circle (4pt);
-        \draw (1,1) circle (4pt);
-        \draw (2,1) circle (4pt);
-      \end{tikzpicture}
+        \begin{tikzpicture}
+          \draw (0,0) circle (4pt);
+          \draw (1,0) circle (4pt);
+          \draw (2,0) circle (4pt);
+          \draw (0,1) circle (4pt);
+          \draw (1,1) circle (4pt);
+          \draw (2,1) circle (4pt);
+        \end{tikzpicture}
       \end{image}
     \end{hint}
     \begin{hint}
       $3\times 2=6$
     \end{hint}
-    $3\times 2 = $ \answer{6}
+    $3\times 2 = \answer{6}$
 \end{question}
 
 \section{Hints with questions}
@@ -70,26 +70,27 @@ What is the abscissa of the critical point of the function $f(x) = x^2+2x+1$?
 \begin{hint}
 What is the derivative of $f$?
 \begin{prompt}
-	$f'(x) = $ \answer{2x+2}
+	$f'(x) = \answer{2x+2}$
 \end{prompt}
 \end{hint}
 \begin{prompt}
-	$x = $ \answer{-1}
+	$x = \answer{-1}$
 \end{prompt}
 \end{question}
 \end{verbatim}
 
 \begin{question}
-What is the abscissa of the critical point of the function $f(x) = x^2+2x+1$?
-\begin{hint}
-	What is the derivative of $f$?
-	\begin{prompt}
-		$f'(x) = $ \answer{2x+2}
-	\end{prompt}
-\end{hint}
-\begin{prompt}
-	$x = $ \answer{-1}
-\end{prompt}
+  What is the abscissa of the critical point of the function $f(x) =
+  x^2+2x+1$?
+  \begin{hint}
+    What is the derivative of $f$?
+    \begin{prompt}
+      $f'(x) = \answer{2x+2}$
+    \end{prompt}
+  \end{hint}
+  \begin{prompt}
+    $x =  \answer{-1}$
+  \end{prompt}
 \end{question}
 
 \end{document}
