@@ -9,37 +9,9 @@ Instructions for setting up a repository containing course materials.
 \end{abstract}
 \maketitle
 
-This tutorial is intended to help course instructors get a
-\link[Ximera]{http://ximera.osu.edu} course up and running. It guides
-the reader through the creation of a \link[git]{http://git-scm.com}
-repository and the creation of an activity containing a simple
-exercise.
-
-The instructions below assume that the reader will be working on a
-computer running either Linux or OS X.  Similar instructions for
-Windows users will be composed at a later stage, but the Linux
-instructions below will probably be sufficient for Windows users with
-some familiarity with Unix commands.  While the reader could in
-principle avoid installing \link[\LaTeX]{http://texlive.org} and
-\link[git]{http://git-scm.com} these programs are necessary to take
-full advantage of the features of the
-\link[Ximera]{http://ximera.osu.edu} system.
-
-\begin{warning} Currently {\em anyone} can
-create a course on the webserver
-\link[Ximera]{http://ximera.osu.edu}.
-This is to say that if you follow the instructions below,
-a new course that {\em you} control will appear on the web,
-visible to all the world. It goes without saying therefore that
-your course should not contain offensive or copyrighted
-materials. However, in the future, it is quite likely that a
-more robust course validation mechanism will be implemented.
-\end{warning}
 
 \subsection{Setting up a Ximera repository from scratch}
 This section describes how to create a course from scratch.
-In \autoref{ForkClone} we will discuss other ways to create
-courses, such as forking existing courses.
 \begin{enumerate}
 \item\label{Mkdir} Create a directory for your course files
 and change to that directory.
@@ -248,7 +220,7 @@ for more information on creating exercises.
 \item Change to the directory \verb!anExampleCourse!
 and execute the following commands.
 \begin{verbatim}
-git commit -am "Added an exercise"
+git commit -m "Added an exercise"
 git push
 \end{verbatim}
 If everything went well, you should find your course listed at

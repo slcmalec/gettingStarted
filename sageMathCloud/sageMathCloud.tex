@@ -5,14 +5,14 @@
 
 \begin{document}
 \begin{abstract}
-SAGE Math Cloud is the easist way for a new author to publish.
+SAGE Math Cloud is the easiest way for a new author to publish.
 \end{abstract}
 \maketitle
 
 To publish your work to the internet, you will need a computer that
-can run our tools. The developers of Ximera use \link[Arch Linux]{http://www.archlinux.org/}, but we belive that to be too difficult for the average user. Instead, we suggest you use \link[SAGE]{http://cloud.sagemath.com/}.
+can run our tools. The developers of Ximera use \link[Arch Linux]{http://www.archlinux.org/}, but we believe that to be too difficult for the average user. Instead, we suggest you use \link[SAGE]{http://cloud.sagemath.com/}.
 
-Once you have a SAGE accound, you will need to start a new project
+Once you have a SAGE account, you will need to start a new project
 
 \begin{image}
   \includegraphics{createNewProject.png}
@@ -23,28 +23,25 @@ Description. This project \textbf{must} have internet access.
 \begin{image}
   \includegraphics{internet.png}
 \end{image}
-
-
+Now you will need to add a terminal to your SAGE account, click on
 \begin{image}
   \includegraphics{create.png}
 \end{image}
-
-
+and select ``Terminal.'' 
 \begin{image}
   \includegraphics{type.png}
 \end{image}
-
-
-Now when you click on files, a terminal will be one of your options.
-
-Click on the terminal and type
-
+After a few seconds, a window will appear
+\begin{image}
+  \includegraphics{typingCurl.png}
+\end{image}
+and you will type:
 \begin{verbatim}
 curl https://ximera.osu.edu/install.sh | bash
 \end{verbatim}
-to install an environment that has the required tools (like the Ximera
-class file, the `xake' build tool to compile and publish to the
-server, and mutool for rasterizing graphics).
+This will install all the required tools (like the Ximera class file,
+the `xake' build tool to compile and publish to the server, and mutool
+for rasterizing graphics).
 
 
 \end{document}
