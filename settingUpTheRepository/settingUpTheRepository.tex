@@ -181,11 +181,13 @@ The content of \verb!README.md! will appear only on
 This file is meant to provide a description of your project
 to other developers.
 \end{remark}
+
 \item In order to have your course served by
-  \link[ximera.osu.edu/course]{http://ximera.osu.edu/course} you need
-  to \verb!push! your repository.  However, since \textsf{git} will
-  not allow a \verb!push!  if you haven't made any changes to the
-  repository, this is a good point to add some further content in the
+  \link[ximera.osu.edu/]{http://ximera.osu.edu/} you need permission
+  to publish.  Request permission by e-mailing
+  \link[ximera@math.osu.edu]{mailto:ximera@math.osu.edu}.
+
+\item This is a good point to add some further content in the
   form of a simple exercise.  Update the file
   \verb!theFirstActivity.tex!  you created above so that it looks like
   the following.
@@ -221,12 +223,13 @@ for more information on creating exercises.
 and execute the following commands.
 \begin{verbatim}
 git commit -m "Added an exercise"
-git push
+xake bake
+xake publish
 \end{verbatim}
-If everything went well, you should find your course listed at
-\link[ximera.osu.edu/course]{http://ximera.osu.edu/course}.  If not,
-see the {\sf Troubleshooting} activity in this tutorial or send your
-questions to \link[ximera@math.osu.edu]{mailto:ximera@math.osu.edu}.
+If everything went well, you should see a URL printed on the terminal.
+If not, see the {\sf Troubleshooting} activity in this tutorial or
+send your questions to
+\link[ximera@math.osu.edu]{mailto:ximera@math.osu.edu}.
 \begin{remark} The commands above inform 
 \link[git]{http://git-scm.com} that changes have been made to your
 repository and communicates them to
