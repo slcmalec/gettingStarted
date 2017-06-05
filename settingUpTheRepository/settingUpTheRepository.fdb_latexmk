@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1496690750 "settingUpTheRepository.tex" "settingUpTheRepository.pdf" "settingUpTheRepository" 1496690751
+["pdflatex"] 1496690975 "settingUpTheRepository.tex" "settingUpTheRepository.pdf" "settingUpTheRepository" 1496690976
   "/etc/texmf/web2c/texmf.cnf" 1451279870 1464 a4af512f3aaf20a97ae1601d19d817c4 ""
   "/projects/22d182c1-2649-4924-accd-a78f46b52d3c/texmf/tex/latex/ximeraLatex/ximera.cls" 1496622639 40037 52c32e9e88db3bdd20c7c3d0afed3cfc ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -232,16 +232,18 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1435377840 31349 7675f8adfbe12aae865d340d35423a49 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1451280563 1779312 b2f993ff39f888114b7dddf8751f0ae0 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1451280644 3844746 6b008947ed367f1201b54964b1675710 ""
-  "settingUpTheRepository.aux" 1496690751 1382 b938484b3e04254fa1dec4184419a796 ""
-  "settingUpTheRepository.out" 1496690751 318 2aaa959cf866310b67b2265e2b0eae6e ""
+  "CreateRepo.png" 1469555417 160016 7edb84ee90d7f7e77b379c6d27e459fe ""
+  "RepoInit.png" 1469555417 255965 e2ebbf8de3c60821d3aad3466c89926f ""
+  "settingUpTheRepository.aux" 1496690976 1482 743657e284547575c9843424ee374258 ""
+  "settingUpTheRepository.out" 1496690976 318 2aaa959cf866310b67b2265e2b0eae6e ""
   "settingUpTheRepository.sagetex.sout" 1496690745 256 b02ecc818806b0fa672eb01f1a2afd3d ""
-  "settingUpTheRepository.tex" 1496690749 10400 069381bb0c719cc4dae1b8a6ff350833 ""
+  "settingUpTheRepository.tex" 1496690970 13659 3a8adbe46c16fd3b7389f53b49f33ba3 ""
   (generated)
   "settingUpTheRepository.pdf"
+  "settingUpTheRepository.jax"
+  "settingUpTheRepository.out"
+  "settingUpTheRepository.log"
   "settingUpTheRepository.ids"
+  "settingUpTheRepository.sagetex.sage"
   "settingUpTheRepository.aux"
   "settingUpTheRepository.oc"
-  "settingUpTheRepository.out"
-  "settingUpTheRepository.sagetex.sage"
-  "settingUpTheRepository.jax"
-  "settingUpTheRepository.log"
