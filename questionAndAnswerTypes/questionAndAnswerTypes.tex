@@ -1,19 +1,24 @@
 \documentclass{ximera}
 \title{Question and answer types}
 \begin{document}
-
 \begin{abstract}
   This section explores the different types of exercises Ximera supports. 
 \end{abstract}
-
 \maketitle
 
 Ximera supports many exercise types.
 
 
-\section{Basic Function Answer Type}	
+\section{Basic Function Answer Type}
+
+The basic way of including a answerable item in Xiemra is to use the
+\verb|\answer| command. The \verb|\answer| \textbf{must} be inside of
+an environment.
+
 \begin{verbatim}
-         $3\times 2 = \answer{6}$
+\begin{question}
+$3\times 2 = \answer{6}$
+\end{question}
 \end{verbatim}
 
 Will produce the question:
@@ -44,7 +49,21 @@ $100$ different complex numbers, and seeing if the results are
 of these functions to circumvent domain issues.
 \end{remark}
 
-\section{Multiple Choice Answer Type}
+
+While \textbf{any} environment can contain the command \verb|\answer|,
+there are four special environments: \verb|question|, \verb|exercise|,
+\verb|problem|, \verb|exploration|. Each of these environments is the
+same, except for the name. These environment interact with the
+optional arguments in the documentclass in useful ways. We'll discuss
+this later.
+
+
+
+
+
+\section{Choice Answer Type}
+
+\subsection{Multiple Choice}
 
 \begin{verbatim}
 \begin{question}
@@ -69,40 +88,84 @@ Produces:
 \end{question}
 
 \begin{remark}
-  Multiple choice questions are automatically shuffled.
+  Multiple choice answers appear in the order you type them. 
 \end{remark}
 
-\section{Matrix Answer Type}
 
-We also support matrices of expressions.
+\subsection{Select All}
 
 \begin{verbatim}
 \begin{question}
-Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
-    \begin{matrixAnswer}
-	    correctMatrix = [['x','y'],['xy','z+1']]
-    \end{matrixAnswer}
+  Which of the following numbers are even?
+  \begin{selectAll}
+    \choice[correct]{$2$}
+    \choice{$1$}
+    \choice[correct]{$-4$}
+    \choice[correct]{$0$}
+  \end{selectAll}
 \end{question}
 \end{verbatim}
 
+Produces:
+
 \begin{question}
-  Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
-  \begin{matrixAnswer}
-    correctMatrix = [['x','y'],['xy','z+1']]
-  \end{matrixAnswer}
+  Which of the following numbers are even?
+  \begin{selectAll}
+    \choice[correct]{$2$}
+    \choice{$1$}
+    \choice[correct]{$-4$}
+    \choice[correct]{$0$}
+  \end{selectAll}
 \end{question}
 
 \begin{remark}
-  The plus and minus muttons add and subtract columns or rows.  
+  Select All answers appear in the order you type them. 
 \end{remark}
+
+
+%% \section{Matrix Answer Type}
+
+%% We also support matrices of expressions.
+
+%% \begin{verbatim}
+%% \begin{question}
+%% Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
+%%     \begin{matrixAnswer}
+%% 	    correctMatrix = [['x','y'],['xy','z+1']]
+%%     \end{matrixAnswer}
+%% \end{question}
+%% \end{verbatim}
+
+%% \begin{question}
+%%   Enter the matrix  \(\begin{bmatrix} x & y \\ xy & z+1 \end{bmatrix}\)
+%%   \begin{matrixAnswer}
+%%     correctMatrix = [['x','y'],['xy','z+1']]
+%%   \end{matrixAnswer}
+%% \end{question}
+
+%% \begin{remark}
+%%   The plus and minus buttons add and subtract columns or rows.  
+%% \end{remark}
 
 \section{free-response}
 
 The free response environment gives students access to a \LaTeX\ editor. 
 
-\begin{freeResponse}
-  This is the model solution.
-\end{freeResponse}
+\begin{verbatim}
+\begin{question}
+	Question goes here!
+	\begin{freeResponse}
+	This is the model solution %You don't actually need anything in between the begin and end line.
+	\end{freeResponse} 
+\end{question}
+\end{verbatim}
+
+\begin{question}
+	Question goes here!
+	\begin{freeResponse}
+	This is the model solution %You don't actually need anything in between the begin and end line.
+	\end{freeResponse} 
+\end{question}
 
 \begin{remark}
 Clicking on \verb!View model solution! shows the user
