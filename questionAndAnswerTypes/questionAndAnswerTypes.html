@@ -1,0 +1,150 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Question and answer types</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<!-- charset=utf-8,-css,html,xhtml --> 
+<meta name="src" content="questionAndAnswerTypes.tex" /> 
+<meta name="date" content="2017-06-05 19:28:00" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"/> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\Sectionformat }[2]{#1}                             </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+<!--l. 6--><p class="noindent" >This section explores the different types of exercises Ximera supports.
+</p></div>
+<div class="maketitle"></div>
+<!--l. 11--><p class="noindent" >Ximera supports many exercise types.
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Basic Function Answer Type</h3>
+<!--l. 15--><p class="noindent" ><pre>
+         $3\times 2 = \answer{6}$
+</p><!--l. 17--><p class="noindent" ></pre>
+</p><!--l. 19--><p class="noindent" >Will produce the question:
+</p>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-1001r1"></a> <script type="math/tex"> <![CDATA[ 
+3\times 2 = \answer {6} 
+]]> 
+</script>
+</div>
+<!--l. 25--><p class="noindent" >In addition to numerical answers, we also support elementary functions:
+</p><!--l. 27--><p class="noindent" ><pre>
+    \begin{question}
+ <br />         $ \frac{\partial}{\partial x} x^2\sin(y) =  \answer{2x\sin(y)}$
+ <br />    \end{question}
+</p><!--l. 31--><p class="noindent" ></pre>
+</p><!--l. 33--><p class="noindent" >Produces:
+</p>
+<div class="problem-environment question" id="problem2"><a 
+ id="x1-1002r2"></a> <script type="math/tex"> <![CDATA[ 
+ \frac {\partial }{\partial x} x^2\sin (y) = \answer {2x\sin (y)} 
+]]> 
+</script>
+</div>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment remark" id="problem3"><a 
+ id="x1-1003r3"></a>Under the hood, Ximera is parsing the user input, producing a function, and
+checking the user input function against ‘‘answer&#x2019;&#x2019; at <script type="math/tex"> <![CDATA[ 
+100 
+]]> 
+</script> different complex
+numbers, and seeing if the results are ‘‘reasonably&#x2019;&#x2019; close to each other. We
+compare the complex extensions of these functions to circumvent domain
+issues.
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Multiple Choice Answer Type</h3>
+<!--l. 49--><p class="noindent" ><pre>
+\begin{question}
+ <br />Which of the following functions has a graph which is a parabola?
+ <br />\begin{multipleChoice}
+ <br />\choice[correct]{$y=x^2+3x-3$}
+ <br />\choice{$y = \frac{1}{x+2}$}
+ <br />\choice{$y=3x+1$}
+ <br />\end{multipleChoice}
+ <br />\end{question}
+</p><!--l. 58--><p class="noindent" ></pre>
+</p><!--l. 60--><p class="noindent" >Produces:
+</p>
+<div class="problem-environment question" id="problem4"><a 
+ id="x1-2001r4"></a> Which of the following functions has a graph which is a parabola? <div class="multiple-choice" id="problem5"><span class="choice correct "   id="choice1"><script type="math/tex"> <![CDATA[ 
+y=x^2+3x-3 
+]]> 
+</script></span> <span class="choice  "   id="choice2"><script type="math/tex"> <![CDATA[ 
+y = \frac {1}{x+2} 
+]]> 
+</script></span> <span class="choice  "   id="choice3"><script type="math/tex"> <![CDATA[ 
+y=3x+1 
+]]> 
+</script></span> </div>
+</div>
+<div class="theorem-like problem-environment remark" id="problem6"><a 
+ id="x1-2002r5"></a>Multiple choice questions are automatically shuffled.
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Matrix Answer Type</h3>
+<!--l. 77--><p class="noindent" >We also support matrices of expressions.
+</p><!--l. 79--><p class="noindent" ><pre>
+\begin{question}
+ <br />Enter the matrix  \(\begin{bmatrix} x &#x0026; y \\ xy &#x0026; z+1 \end{bmatrix}\)
+ <br />    \begin{matrixAnswer}
+ <br />    correctMatrix = [[&#x2019;x&#x2019;,&#x2019;y&#x2019;],[&#x2019;xy&#x2019;,&#x2019;z+1&#x2019;]]
+ <br />    \end{matrixAnswer}
+ <br />\end{question}
+                                                                  
+
+                                                                  
+</p><!--l. 86--><p class="noindent" ></pre>
+</p>
+<div class="problem-environment question" id="problem7"><a 
+ id="x1-3001r6"></a> Enter the matrix <script type="math/tex"> <![CDATA[ 
+\begin {bmatrix} x & y \\ xy & z+1 \end {bmatrix} 
+]]> 
+</script>
+<div class="fancyvrb" id="fancyvrb1"><a 
+ id="x1-3003r1"></a>      correctMatrix = [[&#x2019;x&#x2019;,&#x2019;y&#x2019;],[&#x2019;xy&#x2019;,&#x2019;z+1&#x2019;]]</div>
+<!--l. 93--><p class="noindent" ></div>
+</p>
+<div class="theorem-like problem-environment remark" id="problem8"><a 
+ id="x1-3004r7"></a>The plus and minus muttons add and subtract columns or rows.
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>free-response</h3>
+<!--l. 101--><p class="noindent" >The free response environment gives students access to a <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> editor.
+</p>
+<div class="free-response" id="problem9"><a 
+ id="x1-4001r8"></a> This is the model solution.
+</div>
+<div class="theorem-like problem-environment remark" id="problem10"><a 
+ id="x1-4002r9"></a>Clicking on <span class="obeylines-h"><span class="verb">View model solution</span></span> shows the user whatever you typed in the
+<span class="obeylines-h"><span class="verb">freeResponse</span></span> environment.
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+
