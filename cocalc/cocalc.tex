@@ -2,13 +2,12 @@
 
 \title{CoCalc}
 
-%this is just a comment.
+
 \begin{document}
 \begin{abstract}
 CoCalc is the easiest way for a new author to publish.
 \end{abstract}
 \maketitle
-Here is an edit I'm inserting to see if it changes anything.
 
 
 To publish your work to the internet, you will need a computer that
@@ -37,9 +36,11 @@ After a few seconds, a window will appear
 \begin{image}
   \includegraphics{typingCurl.png}
 \end{image}
-and you will type:
+Then run the two commands
 \begin{verbatim}
-curl https://ximera.osu.edu/install.sh | bash
+curl -OL http://xandbox.github.io/cocalc/install.sh
+source install.sh
+
 \end{verbatim}
 This will install all the required tools (like the Ximera class file,
 the `xake' build tool to compile and publish to the server, and mutool
