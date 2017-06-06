@@ -1,3 +1,5 @@
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
 htfcss: cmtt font-family: monospace;
 File: questionAndAnswerTypes.html
 File: questionAndAnswerTypes.tmp
@@ -10,3 +12,4 @@ Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; 
 --- characters ---
 Font("cmr","10","10","100")
 Font("cmtt","10","10","100")
+Font("cmbx","10","10","100")
