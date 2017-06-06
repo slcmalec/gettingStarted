@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <!-- charset=utf-8,-css,html,xhtml --> 
 <meta name="src" content="settingUpTheRepository.tex" /> 
-<meta name="date" content="2017-06-06 16:14:00" /> 
+<meta name="date" content="2017-06-06 16:20:00" /> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <meta name="ximera" content="version 0.0.1" /> 
@@ -155,11 +155,12 @@ class="E">E</span>X</span></span> file in the document class
                                                                   
      </dd><dt class="enumerate-enumitem">
  (e) </dt><dd 
-class="enumerate-enumitem">Now add this file to git and commit your changes. Back in the terminal (and
-     still in your <span class="obeylines-h"><span class="verb">theFirstActivity</span></span> directory), type <pre>
+class="enumerate-enumitem">Now add this file to git and commit your changes. Back in the terminal, change
+     to the directory <span class="obeylines-h"><span class="verb">anExampleCourse</span></span> and execute the following commands
+     <pre>
      git add theFirstActivity.tex
       <br />git commit -m &#x0022;Added first activity file&#x0022;
-     <!--l. 133--><p class="noindent" ></pre>
+     <!--l. 134--><p class="noindent" ></pre>
      </p></dd><dt class="enumerate-enumitem">
   (f) </dt><dd 
 class="enumerate-enumitem">Type <span class="obeylines-h"><span class="verb">xake bake</span></span> to compile the tex documents, then <span class="obeylines-h"><span class="verb">xake frost</span></span> to create a
@@ -171,7 +172,7 @@ class="enumerate-enumitem">Type <span class="obeylines-h"><span class="verb">xak
 class="enumerate-enumitem">This is a good point to add some further content in the form of a simple
      exercise. Update the file <span class="obeylines-h"><span class="verb">theFirstActivity.tex</span></span> you created above so that it
      looks like the following.
-     <!--l. 146--><p class="noindent" ><pre>
+     <!--l. 147--><p class="noindent" ><pre>
     \documentclass{ximera}
       <br />\title{The First Activity}
       <br />\begin{document}
@@ -189,7 +190,7 @@ class="enumerate-enumitem">This is a good point to add some further content in t
       <br />  \end{multipleChoice}
       <br />\end{exercise}
       <br />\end{document}
-     </p><!--l. 164--><p class="noindent" ></pre></p><div class="theorem-like problem-environment remark" id="problem3"><a 
+     </p><!--l. 165--><p class="noindent" ></pre></p><div class="theorem-like problem-environment remark" id="problem3"><a 
  id="x1-1010r3"></a>The edits above insert a multiple-choice question into the <span class="obeylines-h"><span class="verb">theFirstActivity</span></span>
      activity. See the Question and answer types activity later in this tutorial for
      more information on creating exercises.
@@ -203,10 +204,10 @@ class="enumerate-enumitem">Change to the directory <span class="obeylines-h"><sp
      commands. <pre>
      git add theFirstActivity.tex
       <br />git commit -m &#x0022;Added an exercise&#x0022;
-      <br />git push
       <br />xake bake
+      <br />xake frost
       <br />xake publish
-     <!--l. 181--><p class="noindent" ></pre>If everything went well, you should see a URL printed on the terminal.
+     <!--l. 182--><p class="noindent" ></pre>If everything went well, you should see a URL printed on the terminal.
      If not, see the Troubleshooting activity in this tutorial or send your
      questions to <a href="mailto:ximera@math.osu.edu">ximera@math.osu.edu</a>. </p><div class="theorem-like problem-environment remark" id="problem4"><a 
  id="x1-1012r4"></a>The commands above inform <a href="http://git-scm.com">git</a> that
@@ -217,7 +218,7 @@ class="enumerate-enumitem">Change to the directory <span class="obeylines-h"><sp
      </div></dd></dl>
 <h4 class="subsectionHead"><a 
  id="x1-2000"></a>Creating further activities</h4>
-<!--l. 196--><p class="noindent" >From here you can create further <a href="http://ximera.osu.edu">Ximera</a> activities as in step FirstExercise. You
+<!--l. 197--><p class="noindent" >From here you can create further <a href="http://ximera.osu.edu">Ximera</a> activities as in step FirstExercise. You
 should issue a <span class="obeylines-h"><span class="verb">git add</span></span> command after creating a new file or directory and a
 <span class="obeylines-h"><span class="verb">git commit</span></span> command followed by a <span class="obeylines-h"><span class="verb">git push</span></span> command periodically to
 transmit your most recent changes to <a href="http://github.com">github.com</a>. You should also add the
@@ -233,7 +234,7 @@ mistakes.
 </p>
 <h4 class="subsectionHead"><a 
  id="x1-3000"></a>Other ways to set up a Ximera repository</h4>
-<!--l. 212--><p class="noindent" ><a class="ximera-label" id="ForkClone"></a> There are other ways to create a <a href="http://ximera.osu.edu">Ximera</a> course. One possibility is to begin by
+<!--l. 213--><p class="noindent" ><a class="ximera-label" id="ForkClone"></a> There are other ways to create a <a href="http://ximera.osu.edu">Ximera</a> course. One possibility is to begin by
 creating the repository on <a href="http://github.com">github.com</a>. Then instead of executing the commands to
 initialize the local copy of the repository, you could clone the copy on <a href="http://github.com">github.com</a>
 using a <span class="obeylines-h"><span class="verb">git clone</span></span> command. Alternately you could fork an existing repository,
@@ -244,7 +245,7 @@ repository.
                                                                   
 
                                                                   
-</p><!--l. 226--><p class="noindent" >Still another possibility is to create and edit all files and directories directly on the
+</p><!--l. 227--><p class="noindent" >Still another possibility is to create and edit all files and directories directly on the
 <a href="http://github.com">github.com</a> web site. In this way you could produce an entire <a href="http://ximera.osu.edu">Ximera</a> course without
 a local copy of the repository. This would have the advantage of not requiring the
 instructor to install the <a href="http://git-scm.com">git</a> or <a href="http://texlive.org"><span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
