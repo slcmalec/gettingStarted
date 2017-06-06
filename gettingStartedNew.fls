@@ -315,8 +315,6 @@ OUTPUT gettingStartedNew.ids
 INPUT /usr/share/texlive/texmf-dist/tex/latex/forloop/forloop.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/forloop/forloop.sty
 OUTPUT gettingStartedNew.jax
-INPUT preamble.tex
-INPUT preamble.tex
 INPUT gettingStartedNew.aux
 INPUT gettingStartedNew.aux
 OUTPUT gettingStartedNew.aux
