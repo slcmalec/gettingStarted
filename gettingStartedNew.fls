@@ -386,12 +386,10 @@ INPUT cocalc/cocalc.tex
 INPUT cocalc/cocalc.tex
 INPUT makingEdits/makingEdits.tex
 INPUT makingEdits/makingEdits.tex
-INPUT settingUpTheRepository/settingUpTheRepository.tex
-INPUT settingUpTheRepository/settingUpTheRepository.tex
+INPUT settingUpACourse/settingUpACourse.tex
+INPUT settingUpACourse/settingUpACourse.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
-INPUT troubleshooting/troubleshooting.tex
-INPUT troubleshooting/troubleshooting.tex
 INPUT questionAndAnswerTypes/questionAndAnswerTypes.tex
 INPUT questionAndAnswerTypes/questionAndAnswerTypes.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
@@ -410,7 +408,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
