@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <!-- charset=utf-8,-css,html,xhtml --> 
 <meta name="src" content="settingUpTheRepository.tex" /> 
-<meta name="date" content="2017-06-06 15:10:00" /> 
+<meta name="date" content="2017-06-06 16:14:00" /> 
 <meta charset="UTF-8" /> 
 <meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
 <meta name="ximera" content="version 0.0.1" /> 
@@ -56,11 +56,11 @@ class="enumerate-enumitem"><a class="ximera-label" id="Mkdir"></a> In this examp
      </p></dd><dt class="enumerate-enumitem">
  (b) </dt><dd 
 class="enumerate-enumitem">Next we will modify the <span class="obeylines-h"><span class="verb">anExampleCourse.tex</span></span> file in the (<span class="obeylines-h"><span class="verb">anExampleCourse</span></span>)
-     directory. Click ‘‘Files” and click on the (<span class="obeylines-h"><span class="verb">anExampleCourse</span></span>) directory, then
-     click the file <span class="obeylines-h"><span class="verb">anExampleCourse.tex</span></span>. Copy and paste the following in the
-     left-hand side of the window and click ‘‘Save.” It may complain that
-     you haven&#x2019;t created the <span class="obeylines-h"><span class="verb">theFirstActivity.tex</span></span> file yet, but that&#x2019;s
-     fine.
+     directory. Click ‘‘Files,” click on the (<span class="obeylines-h"><span class="verb">xandbox</span></span>) directory and click on the
+     (<span class="obeylines-h"><span class="verb">anExampleCourse</span></span>) directory, then click the file <span class="obeylines-h"><span class="verb">anExampleCourse.tex</span></span>. Copy
+     and paste the following in the left-hand side of the window and click ‘‘Save.” It
+     may complain that you haven&#x2019;t created the <span class="obeylines-h"><span class="verb">theFirstActivity.tex</span></span> file yet,
+     but that&#x2019;s fine.
      <!--l. 39--><p class="noindent" ><pre>
                                                                   
 
@@ -85,17 +85,14 @@ class="enumerate-enumitem">Next we will modify the <span class="obeylines-h"><sp
      </p><!--l. 58--><p class="noindent" >Now return to the terminal window, which should still be in the directory
      <span class="obeylines-h"><span class="verb">theExampleCourse</span></span>. You need to add the file (and the directory containing it)
      to git and commit your changes, and also tell it who you are. <pre>
-     git init
-      <br />git config --global user.email &#x0022;your email address&#x0022;
-      <br />git config --global user.name &#x0022;your name&#x0022;
       <br />git add anExampleCourse.tex
       <br />git commit -m &#x0022;this is my first course&#x0022;
-     </p><!--l. 64--><p class="noindent" ></pre>
-     </p><!--l. 66--><p class="noindent" >You will not need to repeat the <span class="obeylines-h"><span class="verb">git config</span></span> lines again, but every time you add
-     a new file, you will need to run <span class="obeylines-h"><span class="verb">git add</span></span> to add it, and every time you change
-     your files you will run <span class="obeylines-h"><span class="verb">git commit -m &#x0022;short description of changes&#x0022;</span></span> to
-     commit the changes to the server. The description of changes is necessary to
-     commit, as is the <span class="obeylines-h"><span class="verb"> -m</span></span>.
+     </p><!--l. 62--><p class="noindent" ></pre>
+     </p><!--l. 64--><p class="noindent" >Every time you add or change files, you will need to run <span class="obeylines-h"><span class="verb">git add</span></span>
+     and <span class="obeylines-h"><span class="verb">git commit -m &#x0022;short description of changes&#x0022;</span></span> to commit
+     the changes to the server. The description of changes is necessary to
+     commit, as is the <span class="obeylines-h"><span class="verb"> -m</span></span>. If you are changing multiple files, you can use
+     <span class="obeylines-h"><span class="verb">git add *</span></span>.
 </p>
      <div class="theorem-like problem-environment remark" id="problem1"><a 
  id="x1-1003r1"></a>In general the file with the <span class="obeylines-h"><span class="verb">xourse</span></span> document class specifies course information
@@ -105,12 +102,12 @@ class="E">E</span>X</span></span> activity files comprising the course, in the 
      be presented to students. In addition to a name and a description,
      <span class="obeylines-h"><span class="verb">anExampleCourse.tex</span></span> above specifies that there is one activity file
      <span class="obeylines-h"><span class="verb">theFirstActivity.tex</span></span>, written with or without the extension <span class="obeylines-h"><span class="verb">.tex</span></span>, and
+     located in a directory called <span class="obeylines-h"><span class="verb">theFirstActivity</span></span>. We will create this file and
+     directory in the following step.
                                                                   
 
                                                                   
-     located in a directory called <span class="obeylines-h"><span class="verb">theFirstActivity</span></span>. We will create this file and
-     directory in the following step.
-     <!--l. 81--><p class="noindent" >Generally courses should contain more than one activity. We recommend
+     <!--l. 79--><p class="noindent" >Generally courses should contain more than one activity. We recommend
      placing each activity in a directory of the same name. This facilitates sharing
      activities among collaborators and makes reusing existing activities
      easier. We also recommend that the directory and the <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
@@ -129,7 +126,7 @@ class="enumerate-enumitem">Now create your first activity. In your terminal, mov
      accomplished by executing the commands below. <pre>
       <br />cd theFirstActivity
       <br />touch theFirstActivity.tex
-     <!--l. 106--><p class="noindent" ></pre>
+     <!--l. 104--><p class="noindent" ></pre>
      </p></dd><dt class="enumerate-enumitem">
  (d) </dt><dd 
 class="enumerate-enumitem"><a class="ximera-label" id="FirstExercise"></a> Click ‘‘Files” again and navigate to the (<span class="obeylines-h"><span class="verb">theFirstActivity</span></span>) folder, open
@@ -143,45 +140,38 @@ class="enumerate-enumitem"><a class="ximera-label" id="FirstExercise"></a> Click
       <br />\end{abstract}
       <br />\maketitle
       <br />\end{document}
-     <!--l. 120--><p class="noindent" ></pre>
+     <!--l. 118--><p class="noindent" ></pre>
 </p>
      <div class="theorem-like problem-environment remark" id="problem2"><a 
  id="x1-1006r2"></a>An activity should be composed as a regular <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
 class="E">E</span>X</span></span> file in the document class
      <span class="obeylines-h"><span class="verb">ximera</span></span>. It should contain the title of the activity and an abstract. These will
      both appear on the course website in the navigation area, so the abstract
-                                                                  
-
-                                                                  
      should be short. At this stage your activity contains a title and an abstract, but
      is otherwise blank.
      </div>
+                                                                  
+
+                                                                  
      </dd><dt class="enumerate-enumitem">
  (e) </dt><dd 
 class="enumerate-enumitem">Now add this file to git and commit your changes. Back in the terminal (and
      still in your <span class="obeylines-h"><span class="verb">theFirstActivity</span></span> directory), type <pre>
      git add theFirstActivity.tex
       <br />git commit -m &#x0022;Added first activity file&#x0022;
-     <!--l. 135--><p class="noindent" ></pre>
+     <!--l. 133--><p class="noindent" ></pre>
      </p></dd><dt class="enumerate-enumitem">
   (f) </dt><dd 
-class="enumerate-enumitem">Now we will compile all these files. Type <span class="obeylines-h"><span class="verb">xake name</span></span> followed by a space
-     and then a short lowercase name for your xandbox. This could be
-     your first name, for instance. The name you choose must be globally
-     unique, so be creative! For instance, <span class="obeylines-h"><span class="verb">xake name turnloon</span></span> is what I will
-     choose.
+class="enumerate-enumitem">Type <span class="obeylines-h"><span class="verb">xake bake</span></span> to compile the tex documents, then <span class="obeylines-h"><span class="verb">xake frost</span></span> to create a
+     publication commit on top of your source commit. Finally type <span class="obeylines-h"><span class="verb">xake serve</span></span> to
+     share your content with the world. For instance, my content will appear at
+     https://ximera.osu.edu/turnloon/anExampleCourse
      </dd><dt class="enumerate-enumitem">
  (g) </dt><dd 
-class="enumerate-enumitem">Type <span class="obeylines-h"><span class="verb">xake bake</span></span> to compile your first.tex into an html file. Type <span class="obeylines-h"><span class="verb">xake frost</span></span>
-     to create a publication commit on top of your source commit. Finally type
-     <span class="obeylines-h"><span class="verb">xake serve</span></span> to share your content with the world. For instance, my content
-     will appear at https://ximera.osu.edu/turnloon/anExampleCourse
-     </dd><dt class="enumerate-enumitem">
- (h) </dt><dd 
 class="enumerate-enumitem">This is a good point to add some further content in the form of a simple
      exercise. Update the file <span class="obeylines-h"><span class="verb">theFirstActivity.tex</span></span> you created above so that it
      looks like the following.
-     <!--l. 148--><p class="noindent" ><pre>
+     <!--l. 146--><p class="noindent" ><pre>
     \documentclass{ximera}
       <br />\title{The First Activity}
       <br />\begin{document}
@@ -194,21 +184,21 @@ class="enumerate-enumitem">This is a good point to add some further content in t
       <br />  Choose the best place to work on mathematics.
       <br />  \begin{multipleChoice}
       <br />    \choice{At the library}
-                                                                  
-
-                                                                  
       <br />    \choice[correct]{At the caf\&#x2019;e}
       <br />    \choice{In your office}
       <br />  \end{multipleChoice}
       <br />\end{exercise}
       <br />\end{document}
-     </p><!--l. 166--><p class="noindent" ></pre></p><div class="theorem-like problem-environment remark" id="problem3"><a 
- id="x1-1011r3"></a>The edits above insert a multiple-choice question into the <span class="obeylines-h"><span class="verb">theFirstActivity</span></span>
+     </p><!--l. 164--><p class="noindent" ></pre></p><div class="theorem-like problem-environment remark" id="problem3"><a 
+ id="x1-1010r3"></a>The edits above insert a multiple-choice question into the <span class="obeylines-h"><span class="verb">theFirstActivity</span></span>
      activity. See the Question and answer types activity later in this tutorial for
      more information on creating exercises.
      </div>
+                                                                  
+
+                                                                  
      </dd><dt class="enumerate-enumitem">
-  (i) </dt><dd 
+ (h) </dt><dd 
 class="enumerate-enumitem">Change to the directory <span class="obeylines-h"><span class="verb">anExampleCourse</span></span> and execute the following
      commands. <pre>
      git add theFirstActivity.tex
@@ -216,10 +206,10 @@ class="enumerate-enumitem">Change to the directory <span class="obeylines-h"><sp
       <br />git push
       <br />xake bake
       <br />xake publish
-     <!--l. 183--><p class="noindent" ></pre>If everything went well, you should see a URL printed on the terminal.
+     <!--l. 181--><p class="noindent" ></pre>If everything went well, you should see a URL printed on the terminal.
      If not, see the Troubleshooting activity in this tutorial or send your
      questions to <a href="mailto:ximera@math.osu.edu">ximera@math.osu.edu</a>. </p><div class="theorem-like problem-environment remark" id="problem4"><a 
- id="x1-1013r4"></a>The commands above inform <a href="http://git-scm.com">git</a> that
+ id="x1-1012r4"></a>The commands above inform <a href="http://git-scm.com">git</a> that
      changes have been made to your repository and communicates them to
      <a href="http://github.com">github.com</a> which in turn communicates them to <a href="http://ximera.osu.edu">ximera.osu.ed</a>. You
      should execute similar commands whenever you change files in your
@@ -227,7 +217,7 @@ class="enumerate-enumitem">Change to the directory <span class="obeylines-h"><sp
      </div></dd></dl>
 <h4 class="subsectionHead"><a 
  id="x1-2000"></a>Creating further activities</h4>
-<!--l. 198--><p class="noindent" >From here you can create further <a href="http://ximera.osu.edu">Ximera</a> activities as in step FirstExercise. You
+<!--l. 196--><p class="noindent" >From here you can create further <a href="http://ximera.osu.edu">Ximera</a> activities as in step FirstExercise. You
 should issue a <span class="obeylines-h"><span class="verb">git add</span></span> command after creating a new file or directory and a
 <span class="obeylines-h"><span class="verb">git commit</span></span> command followed by a <span class="obeylines-h"><span class="verb">git push</span></span> command periodically to
 transmit your most recent changes to <a href="http://github.com">github.com</a>. You should also add the
@@ -241,12 +231,9 @@ class="E">E</span>X</span></span> and inspecting the
 resulting PDF file, which might be helpful in any case for finding and correcting
 mistakes.
 </p>
-                                                                  
-
-                                                                  
 <h4 class="subsectionHead"><a 
  id="x1-3000"></a>Other ways to set up a Ximera repository</h4>
-<!--l. 214--><p class="noindent" ><a class="ximera-label" id="ForkClone"></a> There are other ways to create a <a href="http://ximera.osu.edu">Ximera</a> course. One possibility is to begin by
+<!--l. 212--><p class="noindent" ><a class="ximera-label" id="ForkClone"></a> There are other ways to create a <a href="http://ximera.osu.edu">Ximera</a> course. One possibility is to begin by
 creating the repository on <a href="http://github.com">github.com</a>. Then instead of executing the commands to
 initialize the local copy of the repository, you could clone the copy on <a href="http://github.com">github.com</a>
 using a <span class="obeylines-h"><span class="verb">git clone</span></span> command. Alternately you could fork an existing repository,
@@ -254,7 +241,10 @@ either your own or someone else&#x2019;s. See the <a href="http://git-scm.com">g
 <span class="obeylines-h"><span class="verb">clone</span></span> and <span class="obeylines-h"><span class="verb">fork</span></span> commands. Both possibilities above obviate step Mkdir since cloning
 or forking a <a href="http://git-scm.com">git</a> repository creates a local directory and initializes it as a <a href="http://git-scm.com">git</a>
 repository.
-</p><!--l. 228--><p class="noindent" >Still another possibility is to create and edit all files and directories directly on the
+                                                                  
+
+                                                                  
+</p><!--l. 226--><p class="noindent" >Still another possibility is to create and edit all files and directories directly on the
 <a href="http://github.com">github.com</a> web site. In this way you could produce an entire <a href="http://ximera.osu.edu">Ximera</a> course without
 a local copy of the repository. This would have the advantage of not requiring the
 instructor to install the <a href="http://git-scm.com">git</a> or <a href="http://texlive.org"><span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
