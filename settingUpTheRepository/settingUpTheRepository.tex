@@ -32,7 +32,7 @@ mkdir theFirstActivity
 touch anExampleCourse.tex
 \end{verbatim}
 
-\item Next we will modify the \verb!anExampleCourse.tex! file in the (\verb!anExampleCourse!) directory. Click ``Files" and click on the  (\verb!anExampleCourse!) directory, then click the file \verb!anExampleCourse.tex!. Copy and paste the following in the left-hand side of the window and click ``Save." It may complain that you haven't created the \verb!theFirstActivity.tex! file yet, but that's fine.
+\item Next we will modify the \verb!anExampleCourse.tex! file in the (\verb!anExampleCourse!) directory. Click ``Files," click on the (\verb!xandbox!) directory and click on the  (\verb!anExampleCourse!) directory, then click the file \verb!anExampleCourse.tex!. Copy and paste the following in the left-hand side of the window and click ``Save." It may complain that you haven't created the \verb!theFirstActivity.tex! file yet, but that's fine.
 
     
 
@@ -56,14 +56,12 @@ This is a Ximera activity explaining how to get started with Ximera for course i
 \end{verbatim}
 
 Now return to the terminal window, which should still be in the directory \verb!theExampleCourse!. You need to add the file (and the directory containing it) to git and commit your changes, and also tell it who you are. \begin{verbatim}
-git init
-git config --global user.email "your email address"
-git config --global user.name "your name"
+
 git add anExampleCourse.tex
 git commit -m "this is my first course"
 \end{verbatim}
 
-You will not need to repeat the \verb!git config! lines again, but every time you add a new file, you will need to run \verb!git add! to add it, and every time you change your files you will run \verb!git commit -m "short description of changes"! to commit the changes to the server. The description of changes is necessary to commit, as is the \verb! -m!.
+Every time you add or change files, you will need to run \verb!git add! and \verb!git commit -m "short description of changes"! to commit the changes to the server. The description of changes is necessary to commit, as is the \verb! -m!. If you are changing multiple files, you can use \verb!git add *!.
 
 
 \begin{remark}
@@ -135,9 +133,9 @@ git commit -m "Added first activity file"
 \end{verbatim}
 
 
-\item Now we will compile all these files. Type \verb!xake name! followed by a space and then a short lowercase name for your xandbox. This could be your first name, for instance. The name you choose must be globally unique, so be creative! For instance, \verb!xake name turnloon! is what I will choose.
 
-\item Type \verb!xake bake! to compile your first.tex into an html file. Type \verb!xake frost! to create a publication commit on top of your source commit. Finally type \verb!xake serve! to share your content with the world. For instance, my content will appear at https://ximera.osu.edu/turnloon/anExampleCourse
+
+\item Type \verb!xake bake! to compile the tex documents, then \verb!xake frost! to create a publication commit on top of your source commit. Finally type \verb!xake serve! to share your content with the world. For instance, my content will appear at https://ximera.osu.edu/turnloon/anExampleCourse
 
 
 \item This is a good point to add some further content in the
