@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1496763281 "cocalc.tex" "cocalc.pdf" "cocalc" 1496763283
+["pdflatex"] 1496763763 "cocalc.tex" "cocalc.pdf" "cocalc" 1496763764
   "/etc/texmf/web2c/texmf.cnf" 1451279870 1464 a4af512f3aaf20a97ae1601d19d817c4 ""
   "/projects/22d182c1-2649-4924-accd-a78f46b52d3c/texmf/tex/latex/ximeraLatex/ximera.cls" 1496691789 42450 ab86632df2d3dbb7e67c8f9ce41cb8dd ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -227,10 +227,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1435377840 31349 7675f8adfbe12aae865d340d35423a49 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1451280563 1779312 b2f993ff39f888114b7dddf8751f0ae0 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1451280644 3844746 6b008947ed367f1201b54964b1675710 ""
-  "cocalc.aux" 1496763283 777 8d03f3a5be5e09e09d928e2cb8ec558a ""
-  "cocalc.out" 1496763283 42 ab3042a55cdaa7b930a654301d62a3b5 ""
+  "cocalc.aux" 1496763764 777 8d03f3a5be5e09e09d928e2cb8ec558a ""
+  "cocalc.out" 1496763764 42 ab3042a55cdaa7b930a654301d62a3b5 ""
   "cocalc.sagetex.sout" 1496763279 240 ce1024c584d35b10ffdaaa7a9792bd35 ""
-  "cocalc.tex" 1496763281 1381 dd1aafd26f63bcb5e1988bb9af379309 ""
+  "cocalc.tex" 1496763762 1443 c6f8ea01148be316dfdb1e8011741706 ""
   "create.png" 1496690970 9286 ac2b7d76f2c424ca87888985dcd51f44 ""
   "createNewProject.png" 1496690970 7602 b0aed0d352ea2382706c21274728b808 ""
   "internet.png" 1496690970 63632 956db65eb3fc33ca70932a7e6854a7c0 ""
@@ -238,10 +238,10 @@
   "typingCurl.png" 1496690970 25624 3817d3762ae2f526c282df5a6f6b7dad ""
   (generated)
   "cocalc.jax"
-  "cocalc.log"
   "cocalc.out"
+  "cocalc.sagetex.sage"
+  "cocalc.ids"
   "cocalc.pdf"
   "cocalc.aux"
-  "cocalc.sagetex.sage"
+  "cocalc.log"
   "cocalc.oc"
-  "cocalc.ids"
